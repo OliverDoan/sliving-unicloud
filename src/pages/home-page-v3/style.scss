@@ -92,10 +92,10 @@ img {
     text-align: center;
     letter-spacing: 0.22em;
     color: #0979fd;
-    margin-bottom: 14px;
   }
 
   .title-line-center {
+    margin-top: 14px;
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
@@ -103,7 +103,7 @@ img {
     color: #2c2d2e;
   }
   .img-line-center {
-    margin: 14px auto;
+    margin: 16px auto 36px;
   }
   .description-line-center {
     font-weight: 500;
@@ -257,7 +257,7 @@ img {
 //---------------------------------------------------------------End Section Feature Project-------------------------------------------------
 
 .bg-ground-smart-lighting {
-  margin: 120px auto;
+  margin: 60px auto 120px;
   .smart-lighting-des {
     font-weight: 500;
     font-size: 16px;
@@ -364,30 +364,48 @@ img {
     }
   }
 }
+@media only screen and (max-width: 460px) {
+  .advise-now-btn {
+    width: auto !important;
+  }
+  .advise-now-btn span,
+  .learn-more-btn span {
+    font-size: 12px !important;
+    // display: none !important;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .btn-group {
+    display: block !important;
+  }
+  .advise-now-btn,
+  .learn-more-btn {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+}
 //---------------------------------------------------------------Begin Section Smart Parking-------------------------------------------------
 .bg-ground-smart-parking {
+  border: 1px solid #e1e3e6;
+  margin-top: 200px;
+  padding: 60px 0;
   .smart-parking-group-img {
     margin: 0 auto;
   }
   .smart-parking-title {
     text-align: center;
-    /* Subtitle 1/Bold */
 
     font-weight: 700;
     font-size: 28px;
     line-height: 32px;
-    /* identical to box height, or 114% */
 
     text-align: center;
-
-    /* UniCloud/UniBlue/100 */
 
     color: #0979fd;
     margin-top: 36px;
   }
   .smart-parking-des {
     text-align: center;
-    // text-align: justify;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -396,11 +414,13 @@ img {
     max-width: 765px;
     margin-top: 14px;
   }
-  .smart-parking-cards {
-    margin-top: 32px !important;
-  }
+
   .smart-parking-card {
     text-align: center;
+    margin-top: 32px;
+    .smart-parking-card-top {
+      height: 100px;
+    }
     .smart-parking-card-img {
       margin: 0 auto;
     }
@@ -408,12 +428,7 @@ img {
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      /* or 150% */
-
       text-align: center;
-
-      /* Light mode/Gray/gray_700 */
-
       color: #454647;
       margin-top: 25px;
     }
@@ -421,6 +436,7 @@ img {
   .btn-group {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
   }
 }
 //---------------------------------------------------------------End Section Smart Parking-------------------------------------------------

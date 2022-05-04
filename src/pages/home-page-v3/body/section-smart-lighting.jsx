@@ -38,7 +38,7 @@ function SectionSmartLighting() {
           </div>
         </Row>
         <Row>
-          <Col lg={7} md={12}>
+          <Col lg={7} md={12} className="gx-5">
             <p className="smart-lighting-des">
               Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
               nhằm đạt hai mục tiêu: Nâng cao chất lượng chiếu sáng (thay đổi
@@ -67,7 +67,7 @@ function SectionSmartLighting() {
             </div>
             <Image src={imgSmartLightingLeft} />
           </Col>
-          <Col lg={5} md={12}>
+          <Col lg={5} md={12} className="gx-5">
             <div className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
                 <div className="smart-lighting-card" key={itemCard.id}>
