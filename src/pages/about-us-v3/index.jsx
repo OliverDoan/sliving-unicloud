@@ -9,7 +9,6 @@ const AboutPage = () => {
   return (
     <main>
       <SectionHeader />
-      <SectionIntro />
     </main>
   );
 };
