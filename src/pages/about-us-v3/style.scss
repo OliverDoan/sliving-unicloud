@@ -65,3 +65,27 @@ img {
 }
 
 //---------------------------------------------------------------Begin Section Intro-------------------------------------------------
+
+//---------------------------------------------------------------Begin Section Our Partner-------------------------------------------------
+.bg-section-our-partner {
+  background: #f3f9ff;
+
+  .our-partner-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .description-line-center {
+      margin-top: 24px;
+    }
+  }
+  .logo-items {
+    margin-top: 60px;
+  }
+  .logo-item-content {
+    height: 177px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+  }
+}
+//---------------------------------------------------------------End Section Our Partner-------------------------------------------------
