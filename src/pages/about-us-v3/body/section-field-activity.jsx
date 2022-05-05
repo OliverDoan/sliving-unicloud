@@ -38,7 +38,7 @@ function SectionActivity() {
       {/* <div className="a">
         <Image src={a} />
       </div> */}
-      <Container className=" p-left-right section-activity-container">
+      <Container className="max-width-1180 p-left-right section-activity-container">
         <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
         <Row md={4} xs={2} className="activity-row">
           <Col>

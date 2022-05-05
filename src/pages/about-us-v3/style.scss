@@ -69,13 +69,12 @@ img {
 //---------------------------------------------------------------Begin Section Our Partner-------------------------------------------------
 .bg-section-our-partner {
   background: #f3f9ff;
-
+  .description-line-center {
+    margin-top: 60px;
+  }
   .our-partner-container {
     padding-top: 120px;
     padding-bottom: 120px;
-    .description-line-center {
-      margin-top: 24px;
-    }
   }
   .logo-items {
     margin-top: 60px;
@@ -146,3 +145,46 @@ img {
   }
 }
 //---------------------------------------------------------------End Section Activity-------------------------------------------------
+
+//---------------------------------------------------------------Begin Section Customer Centric-------------------------------------------------
+.bg-section-customer-centric {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .customer-centric-row {
+    margin-top: 60px;
+  }
+  .customer-centric-card {
+    display: flex;
+    margin-bottom: 16px;
+    // max-width: 570px;
+    padding: 0 24px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #e1e3e6;
+    }
+    .customer-centric-icon {
+      height: 64px;
+      width: 64px;
+    }
+    .customer-centric-content {
+      // max-width: 442px;
+      margin-left: 18px;
+      margin-bottom: 16px;
+      .customer-centric-title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        color: #0979fd;
+        padding-bottom: 8px;
+      }
+
+      .customer-centric-item {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------End Section Customer Centric-------------------------------------------------
