@@ -89,3 +89,60 @@ img {
   }
 }
 //---------------------------------------------------------------End Section Our Partner-------------------------------------------------
+
+//---------------------------------------------------------------Begin Section Activity-------------------------------------------------
+.bg-section-activity {
+  .section-activity-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .section-activity-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #0979fd;
+  }
+  .activity-row {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .activity-card {
+    text-align: center;
+    // margin-top: 60px;
+    .activity-card-img {
+      img {
+        margin: 0 auto;
+      }
+    }
+    .activity-card-title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      text-align: center;
+      color: #454647;
+    }
+  }
+  .certification-card {
+    text-align: center;
+    margin-top: 60px;
+    .certification-card-img {
+      height: 120px;
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .certification-card-title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      text-align: center;
+      color: #454647;
+      margin-top: 29px;
+      max-width: 383px;
+    }
+  }
+}
+//---------------------------------------------------------------End Section Activity-------------------------------------------------
