@@ -15,20 +15,7 @@ img {
 }
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
 .p-left-right {
-  padding: 0 40px;
-}
-@media only screen and (max-width: 1024px) {
-  .p-left-right {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .p-left-right {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+  padding: 0 20px;
 }
 
 .max-width-1180 {
