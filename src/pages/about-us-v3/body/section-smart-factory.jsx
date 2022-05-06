@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-
-// Import Swiper styles
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-//  import "swiper/css/swiper.css";
-//  import "swiper/swiper-bundle.css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
@@ -61,8 +57,6 @@ import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 
 // import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
-
-SwiperCore.use([Navigation]);
 
 export const Divider = styled("div")`
   width: 88px;
@@ -202,20 +196,26 @@ const SectionSmartFactory = () => {
         </div>
       </div>
       <div className="smart-factory-slider">
-        {/* <Swiper
-          navigation={{
-            prevEl: ".prev",
-            nextEl: ".next",
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={40}
+          centeredSlides={true}
+          grabCursor={true}
+          loop={true}
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
           }}
-          slidesPerView={1}
-          spaceBetween={30}
+          // navigation={true}
+          // modules={[Pagination, Navigation]}
+          //className="mySwiper"
         >
           {listSlide.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <img src={slide.img} className="swiper-interface-img" alt="" />
+            <SwiperSlide key={slide.id} className="swiper-smart-factory-img">
+              <img src={slide.img} alt="" />
             </SwiperSlide>
           ))}
-        </Swiper> */}
+        </Swiper>
       </div>
     </section>
   );

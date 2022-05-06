@@ -203,6 +203,7 @@ img {
   justify-content: flex-start;
   align-items: center;
   margin-top: 60px;
+  overflow-x: hidden;
 }
 
 .factory-bottom-left-content {
@@ -328,9 +329,49 @@ p.factory-bottom-left-content {
   margin: 16px 0px;
 }
 
-.smart-factory-slider {
+// slider
+.swiper-container {
   width: 100%;
+  height: 440px;
 }
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  width: 280px;
+  height: 360px;
+  border-radius: 7px;
+}
+
+.swiper-slide img {
+  width: 280px;
+  height: 360px;
+  border-radius: 7px;
+}
+
+.swiper-slide-active {
+  transform: scale(1.2);
+  // height: 600px;
+  // width: 700px;
+  transition: 0.4s;
+}
+
+// .swiper-slide-active img {
+//   transform: scale(1.2);
+//   transition: 0.4s;
+// }
+
+// .smart-factory-slider {
+//   width: 100%;
+//   max-height: 440px;
+// }
+
+// .swiper-smart-factory-img {
+//   max-width: 580px;
+//   height: 400px;
+// }
 
 // for device compose animation
 .smart-factory-layout-1 {
