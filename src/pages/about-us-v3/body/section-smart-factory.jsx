@@ -41,6 +41,27 @@ import slideSmartFactory4 from "../../../images/about-us-v3/jpg/img-4.jpg";
 // import slideSmartFactory5 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory5 from "../../../images/about-us-v3/jpg/img-5.jpg";
 
+// import layoutSmartFactory1 from "@images/about-us-v3/png/layout1.png";
+import layoutSmartFactory1 from "../../../images/about-us-v3/png/layout1.png";
+
+// import layoutSmartFactory2 from "@images/about-us-v3/png/layout2.png";
+import layoutSmartFactory2 from "../../../images/about-us-v3/png/layout2.png";
+
+// import layoutSmartFactory3 from "@images/about-us-v3/png/layout3.png";
+import layoutSmartFactory3 from "../../../images/about-us-v3/png/layout3.png";
+
+// import layoutSmartFactory4 from "@images/about-us-v3/png/layout4.png";
+import layoutSmartFactory4 from "../../../images/about-us-v3/png/layout4.png";
+
+// import layoutSmartFactory5 from "@images/about-us-v3/png/layout5.png";
+import layoutSmartFactory5 from "../../../images/about-us-v3/png/layout5.png";
+
+// import layoutSmartFactory6 from "@images/about-us-v3/png/layout6.png";
+import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
+
+// import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
+import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
+
 SwiperCore.use([Navigation]);
 
 export const Divider = styled("div")`
@@ -91,21 +112,24 @@ const SectionSmartFactory = () => {
         </div>
         <div className="factory-bottom-content">
           <div className="factory-bottom-left-content">
-            <p className="factory-first-desc">
-              Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
-              máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao cho
-              cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu cao về
-              quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra, toàn bộ nhà
-              máy còn được điều khiển bởi hệ thống kết nối IoT thông minh được
-              chính Unicloud thiết kế và lắp đặt.
-            </p>
-            <p className="factory-second-desc">
-              Với mong muốn mang tới những sản phẩm có chất lượng cao nhất tới
-              khách hàng, ngoài quy trình thiết kế khép kín, mỗi sản phẩm điện
-              tử của Unicloud còn áp dụng quy trình sản xuất được thực hiện một
-              cách khép kín thông qua việc đầu tư vào nhà máy thông minh, dây
-              chuyền lắp ráp linh kiện hiện đại.
-            </p>
+            <div className="factory-produce-content">
+              <h1 className="factory-title-paragraph">Tự Sản Xuất</h1>
+              <p className="factory-first-desc">
+                Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
+                máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao
+                cho cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu
+                cao về quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra,
+                toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
+                thông minh được chính Unicloud thiết kế và lắp đặt.
+              </p>
+              <p className="factory-second-desc">
+                Với mong muốn mang tới những sản phẩm có chất lượng cao nhất tới
+                khách hàng, ngoài quy trình thiết kế khép kín, mỗi sản phẩm điện
+                tử của Unicloud còn áp dụng quy trình sản xuất được thực hiện
+                một cách khép kín thông qua việc đầu tư vào nhà máy thông minh,
+                dây chuyền lắp ráp linh kiện hiện đại.
+              </p>
+            </div>
             <div className="factory-list-item">
               {factoryItems.map((item) => (
                 <div key={item.id} className="factory-item-container">
@@ -120,6 +144,59 @@ const SectionSmartFactory = () => {
               src={imgSmartFactory}
               alt=""
               className="smart-factory-img"
+            ></img>
+          </div>
+        </div>
+
+        <div className="factory-second-bottom-content">
+          <div className="factory-second-bottom-left-content">
+            <div className="factory-second-produce-content">
+              <h1 className="factory-title-paragraph">Tự Sản Xuất</h1>
+              <p className="factory-first-desc">
+                Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
+                máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao
+                cho cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu
+                cao về quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra,
+                toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
+                thông minh được chính Unicloud thiết kế và lắp đặt.
+              </p>
+            </div>
+          </div>
+          <div className="factory-second-bottom-right-content">
+            <img
+              src={layoutSmartFactory1}
+              alt=""
+              className="smart-factory-img smart-factory-layout-1"
+            ></img>
+            <img
+              src={layoutSmartFactory2}
+              alt=""
+              className="smart-factory-img smart-factory-layout-2"
+            ></img>
+            <img
+              src={layoutSmartFactory3}
+              alt=""
+              className="smart-factory-img smart-factory-layout-3"
+            ></img>
+            <img
+              src={layoutSmartFactory4}
+              alt=""
+              className="smart-factory-img smart-factory-layout-4"
+            ></img>
+            <img
+              src={layoutSmartFactory5}
+              alt=""
+              className="smart-factory-img smart-factory-layout-5"
+            ></img>
+            <img
+              src={layoutSmartFactory6}
+              alt=""
+              className="smart-factory-img smart-factory-layout-6"
+            ></img>
+            <img
+              src={layoutSmartFactory7}
+              alt=""
+              className="smart-factory-img smart-factory-layout-7"
             ></img>
           </div>
         </div>

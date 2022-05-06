@@ -198,9 +198,25 @@ img {
   margin-top: 60px;
 }
 
+.factory-second-bottom-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 60px;
+}
+
 .factory-bottom-left-content {
   max-width: 560px;
-  min-height: 440px;
+  min-height: 496px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.factory-second-bottom-left-content {
+  max-width: 560px;
+  min-height: 322px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,9 +258,26 @@ img {
 }
 
 .factory-bottom-right-content {
-  min-height: 440px;
+  min-height: 496px;
   width: 560px;
   margin-left: 60px;
+}
+
+.factory-second-bottom-right-content {
+  min-height: 322px;
+  width: 259px;
+  margin-left: 191px;
+  position: relative;
+}
+
+.factory-produce-content {
+  min-height: 312px;
+  width: 100%;
+}
+
+.factory-second-produce-content {
+  max-height: 168px;
+  width: 100%;
 }
 
 p.factory-bottom-left-content {
@@ -255,6 +288,17 @@ p.factory-bottom-left-content {
   line-height: 24px;
   text-align: right;
   color: #2c2d2e;
+}
+
+.factory-title-paragraph {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: justify;
+  color: #0979fd;
+  margin-bottom: 16px !important;
 }
 
 .factory-first-desc {
@@ -286,4 +330,40 @@ p.factory-bottom-left-content {
 
 .smart-factory-slider {
   width: 100%;
+}
+
+// for device compose animation
+.smart-factory-layout-1 {
+  z-index: 1;
+  position: absolute;
+}
+
+.smart-factory-layout-2 {
+  z-index: 2;
+  position: absolute;
+}
+
+.smart-factory-layout-3 {
+  z-index: 3;
+  position: absolute;
+}
+
+.smart-factory-layout-4 {
+  z-index: 4;
+  position: absolute;
+}
+
+.smart-factory-layout-5 {
+  z-index: 5;
+  position: absolute;
+}
+
+.smart-factory-layout-6 {
+  z-index: 6;
+  position: absolute;
+}
+
+.smart-factory-layout-7 {
+  z-index: 7;
+  position: absolute;
 }
