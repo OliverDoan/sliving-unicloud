@@ -39,7 +39,7 @@ img {
 
 .about-us-title {
   height: 72px;
-  font-family: "SVN-Gilroy";
+  font-family: "SVN Gilroy";
   font-style: normal;
   font-weight: 400;
   font-size: 62px;
@@ -53,7 +53,7 @@ img {
 .about-us-subtitle {
   max-width: 786px;
   height: 72px;
-  font-family: "SVN-Gilroy";
+  font-family: "SVN Gilroy";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -64,3 +64,226 @@ img {
 }
 
 //---------------------------------------------------------------Begin Section Intro-------------------------------------------------
+.section-intro-v3 {
+  padding-top: 120px;
+}
+
+.intro-container-v3 {
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-title-v3 {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
+
+.intro-subtitle-v3 {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2c2d2e;
+  margin: 16px 0px;
+}
+
+.intro-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-height: 286px;
+}
+
+.intro-flex-revert {
+  flex-direction: row-reverse;
+}
+
+.intro-content-desc {
+  max-width: 724px;
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  color: #454647;
+  margin: 0px 0px;
+}
+
+.intro-content-desc-spacing {
+  margin-top: 24px;
+}
+
+.intro-list-content-container {
+  max-width: 724px;
+  font-family: "SVN Gilroy";
+  font-style: normal;
+
+  text-align: justify;
+}
+
+.intro-item-title {
+  font-size: 21px;
+  line-height: 32px;
+  color: #0979fd;
+  font-weight: 700;
+}
+
+.intro-item-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #454647;
+  font-weight: 500;
+}
+
+.intro-bottom-content {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.intro-grid-gap {
+  display: grid;
+  gap: 24px;
+}
+
+//---------------------------------------------------------------Begin Section Smart Factory-------------------------------------------------
+.section-smart-factory-v3 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #f3f9ff;
+}
+
+.smart-factory-container-v3 {
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.factory-top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.factory-bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.factory-bottom-left-content {
+  max-width: 560px;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.smart-factory-img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.factory-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.factory-list-item > div:not(:first-child) {
+  margin-left: 10px;
+}
+
+.factory-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.factory-item-desc {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #454647;
+  margin-top: 16px;
+}
+
+.factory-bottom-right-content {
+  min-height: 440px;
+  width: 560px;
+  margin-left: 60px;
+}
+
+p.factory-bottom-left-content {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #2c2d2e;
+}
+
+.factory-first-desc {
+  margin-bottom: 24px !important;
+}
+
+.factory-second-desc {
+}
+
+.factory-title-v3 {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
+
+.factory-subtitle-v3 {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2c2d2e;
+  margin: 16px 0px;
+}
+
+.smart-factory-slider {
+  width: 100%;
+}

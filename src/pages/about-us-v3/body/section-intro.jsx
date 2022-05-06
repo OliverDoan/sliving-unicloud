@@ -18,6 +18,14 @@ export const Divider = styled("div")`
   border-radius: 200px;
 `;
 
+export const SmallDivider = styled("div")`
+  width: 100%;
+  max-width: 1180px;
+  height: 0px;
+  border: 1px solid #e1e3e6;
+  margin: 40px 0px;
+`;
+
 const SectionIntro = () => {
   const introItems = [
     {
@@ -27,14 +35,14 @@ const SectionIntro = () => {
         {
           id: 0,
           content:
-            "Không ngừng đổi mới, sáng tạo, Unicloud đồng hành cùng Chính phủ trên con đường số hóa nền kinh tế, gia nhập nhóm doanh nghiệp dẫn đường" +
+            "Không ngừng đổi mới, sáng tạo, Unicloud đồng hành cùng Chính phủ trên con đường số hóa nền kinh tế, gia nhập nhóm doanh nghiệp dẫn đường " +
             "trong cuộc đua cách mạng số vì một Việt Nam hùng cường với nền tảng công nghệ mang tầm Quốc tế. ",
         },
         {
           id: 1,
           content:
-            "Unicloud giải quyết các vấn đề của người Việt bằng trí tuệ của người Việt, tháo gỡ các bài toán khó cho ngành dịch vụ bằng sự chủ động," +
-            "nền tảng công nghệ tân tiến, kết nối đa nhiệm tất cả các Thiết bị - Dịch vụ - Con người. Hướng đến trở thành tập đoàn TOP 10 Đông Nam Á" +
+            "Unicloud giải quyết các vấn đề của người Việt bằng trí tuệ của người Việt, tháo gỡ các bài toán khó cho ngành dịch vụ bằng sự chủ động, " +
+            "nền tảng công nghệ tân tiến, kết nối đa nhiệm tất cả các Thiết bị - Dịch vụ - Con người. Hướng đến trở thành tập đoàn TOP 10 Đông Nam Á " +
             "và TOP 500 thế giới với 5.000 nhân sự tại ít nhất 10 quốc gia trên toàn cầu.",
         },
       ],
@@ -46,7 +54,7 @@ const SectionIntro = () => {
         {
           id: 0,
           content:
-            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế" +
+            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế " +
             "số, Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
         },
       ],
@@ -57,21 +65,22 @@ const SectionIntro = () => {
       listItem: [
         {
           id: 0,
-          title: "Tạo các kịch bản tự động",
+          title: "Tự thách thức và giải quyết thách thức",
           subTitle:
-            "Công tắc mini không dây, công tắc điều khiển không dây và khối Cube được tùy chỉnh để tự động hóa một loạt các tác vụ công việc trong nhà Thiết lập công tắc mini không dây để bật chế độ đọc. Chẳng hạn như, chỉ với một nút bấm duy nhất bạn có thể thực hiện 2 tác vụ cùng một lúc như đóng rèm cửa và tự động điều chỉnh ánh sáng đèn theo ý muốn:",
+            "Chủ động xây dựng các yêu cầu và đưa ra các giải pháp giải quyết thách thức.",
         },
         {
           id: 1,
-          title: "Giám sát & nhận các tính năng cảnh báo",
+          title: "Tự chủ công nghệ",
           subTitle:
-            "Kiểm tra lượng điện nước tiêu thụ mỗi tháng sẽ không còn khó khăn, mất nhiều thời gian và thủ công như trước nữa. Thiết bị cho phép giám sát lượng điện tiêu thụ điện và nước trực tiếp 24/24, đồng thời cho phép thiết lập các ngưỡng tiêu thụ tối đa và gửi các thông tin cảnh báo khi vượt ngưỡng. ",
+            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế số, " +
+            "Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
         },
         {
           id: 2,
-          title: "Giám sát & nhận các tính năng cảnh báo",
+          title: "Nâng cao giá trị con người",
           subTitle:
-            "Kiểm tra lượng điện nước tiêu thụ mỗi tháng sẽ không còn khó khăn, mất nhiều thời gian và thủ công như trước nữa. Thiết bị cho phép giám sát lượng điện tiêu thụ điện và nước trực tiếp 24/24, đồng thời cho phép thiết lập các ngưỡng tiêu thụ tối đa và gửi các thông tin cảnh báo khi vượt ngưỡng. ",
+            "Lấy con người và việc nâng cao giá trị của con người làm kim chỉ nam cho hoạt động của công ty.",
         },
       ],
     },
@@ -88,55 +97,53 @@ const SectionIntro = () => {
         <div className="intro-bottom-content">
           {introItems.map((intro) => {
             return (
-              <Row
-                key={intro.id}
-                className={`${intro.id % 2 === 0 ? "" : "intro-row-revert"} `}
-              >
-                <Col lg={7}>
-                  <img src={intro.icon} alt="" className="intro-icon" />
-                </Col>
-                <Col lg={5}>
-                  {intro?.contents &&
-                    intro?.contents.map((contentItem) => (
-                      <p key={contentItem.id}>{contentItem.content}</p>
-                    ))}
-                  {intro?.listItem &&
-                    intro?.listItem.map((listChild) => (
-                      <div key={listChild.id}>
-                        <h3>{listChild.title}</h3>
-                        <h4>{listChild.subTitle}</h4>
-                      </div>
-                    ))}
-                </Col>
-              </Row>
+              <div className="intro-content-container">
+                <div
+                  key={intro.id}
+                  className={`intro-content-wrapper ${
+                    intro.id % 2 === 0 ? "" : "intro-flex-revert"
+                  } `}
+                >
+                  <div className="intro-bottom-left-content">
+                    <img src={intro.icon} alt="" className="intro-icon" />
+                  </div>
+                  <div className="intro-bottom-right-content">
+                    <div className="intro-grid-gap">
+                      {intro?.contents &&
+                        intro?.contents.map((contentItem) => {
+                          return (
+                            <p
+                              className="intro-content-desc"
+                              key={contentItem.id}
+                            >
+                              {contentItem.content}
+                            </p>
+                          );
+                        })}
+
+                      {intro?.listItem &&
+                        intro?.listItem.map((listChild) => (
+                          <div
+                            className="intro-list-content-container"
+                            key={listChild.id}
+                          >
+                            <h3 className="intro-item-title">
+                              {listChild.title}
+                            </h3>
+                            <h4 className="intro-item-subtitle">
+                              {listChild.subTitle}
+                            </h4>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+                {intro.id !== introItems.length - 1 && <SmallDivider />}
+              </div>
             );
           })}
         </div>
       </div>
-
-      {/* code mẫu */}
-      {/* <section className="ekyc-service">
-      <div className="ekyc-service-wrap container-child">
-        {listService.map((service) => (
-          <div
-            key={service.id}
-            className={`template-grid-2 ekyc-service-group 
-          ${service.id % 2 === 0 ? '' : 'ekyc-service-revert'}`}
-          >
-            <div className="ekyc-service-left ekyc-service-text">
-              <h2 className="ekyc-service-detail">{service.title}</h2>
-              <p className="ekyc-service-detail">{service.desc}</p>
-              <button type="button" className="btn-looking">
-                <span>Tìm hiểu thêm</span>
-              </button>
-            </div>
-            <div className="ekyc-service-right">
-              <img src={service.image} alt="img document" />
-            </div>
-          </div>
-        ))}
-      </div>
-    </section> */}
     </section>
   );
 };

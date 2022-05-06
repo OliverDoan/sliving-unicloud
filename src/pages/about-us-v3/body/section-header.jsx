@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SectionHeader = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.scrollY);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="about-us-v3">
+    <header
+      className="about-us-v3"
+      style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+    >
       <div className="about-us-content">
         <h1 className="about-us-title">VỀ CHÚNG TÔI</h1>
         <p className="about-us-subtitle">
