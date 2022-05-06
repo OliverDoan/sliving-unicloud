@@ -198,12 +198,6 @@ img {
   margin-top: 60px;
 }
 
-.factory-second-bottom-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 60px;
-}
 
 .factory-bottom-left-content {
   max-width: 560px;
@@ -221,12 +215,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-left: auto;
+  // padding-left: 50%;
 }
 
-.smart-factory-img {
-  width: 100%;
-  border-radius: 4px;
-}
 
 .factory-list-item {
   display: flex;
@@ -262,12 +254,73 @@ img {
   width: 560px;
   margin-left: 60px;
 }
+.factory-second-bottom-content {
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  // justify-content: space-between;
+  // width: 200%;
+  width: 190%;
+  float: right;
+  margin-right: 5%;
+  transition: 0.4s;
+}
+// .content-wrap:hover{
+//   max-width: 190%;
+//   width: fit-content;
+//   // .factory-second-bottom-left-content{
+//   //   margin-right: 10%;
+//   // }
+// }
+.smart-factory-img {
+  // width: 100%;
+  right: 0%;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+.smart-factory-layout-6{
+  opacity: 0;
+}
 
 .factory-second-bottom-right-content {
+  margin-left: calc(50% - 820px);
   min-height: 322px;
   width: 259px;
-  margin-left: 191px;
   position: relative;
+  transition: 0.5s;
+  &:hover{
+    float: right;
+    width: 50%;
+    margin-right: 0px;
+    .smart-factory-layout-1{
+      right: -5%;
+    }
+    .smart-factory-layout-2{
+      right: 7%;
+    }
+    .smart-factory-layout-3{
+      right: 25%;
+    }
+    .smart-factory-layout-4{
+      right: 30%;
+    }
+    .smart-factory-layout-5{
+      right: 45%;
+    }
+    .smart-factory-layout-6{
+      right: 55%;
+      opacity: 1;
+    }
+    .smart-factory-layout-7{
+      right: 70%;
+    }
+  }
 }
 
 .factory-produce-content {
@@ -303,9 +356,6 @@ p.factory-bottom-left-content {
 
 .factory-first-desc {
   margin-bottom: 24px !important;
-}
-
-.factory-second-desc {
 }
 
 .factory-title-v3 {

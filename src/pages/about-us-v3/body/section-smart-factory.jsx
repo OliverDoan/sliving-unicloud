@@ -149,55 +149,59 @@ const SectionSmartFactory = () => {
         </div>
 
         <div className="factory-second-bottom-content">
-          <div className="factory-second-bottom-left-content">
-            <div className="factory-second-produce-content">
-              <h1 className="factory-title-paragraph">Tự Sản Xuất</h1>
-              <p className="factory-first-desc">
-                Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
-                máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao
-                cho cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu
-                cao về quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra,
-                toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
-                thông minh được chính Unicloud thiết kế và lắp đặt.
-              </p>
+          <div
+            className="content-wrap"
+          >
+            <div className="factory-second-bottom-left-content">
+              <div className="factory-second-produce-content">
+                <h1 className="factory-title-paragraph">Tự Sản Xuất</h1>
+                <p className="factory-first-desc">
+                  Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
+                  máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao
+                  cho cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu
+                  cao về quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra,
+                  toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
+                  thông minh được chính Unicloud thiết kế và lắp đặt.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="factory-second-bottom-right-content">
-            <img
-              src={layoutSmartFactory1}
-              alt=""
-              className="smart-factory-img smart-factory-layout-1"
-            ></img>
-            <img
-              src={layoutSmartFactory2}
-              alt=""
-              className="smart-factory-img smart-factory-layout-2"
-            ></img>
-            <img
-              src={layoutSmartFactory3}
-              alt=""
-              className="smart-factory-img smart-factory-layout-3"
-            ></img>
-            <img
-              src={layoutSmartFactory4}
-              alt=""
-              className="smart-factory-img smart-factory-layout-4"
-            ></img>
-            <img
-              src={layoutSmartFactory5}
-              alt=""
-              className="smart-factory-img smart-factory-layout-5"
-            ></img>
-            <img
-              src={layoutSmartFactory6}
-              alt=""
-              className="smart-factory-img smart-factory-layout-6"
-            ></img>
-            <img
-              src={layoutSmartFactory7}
-              alt=""
-              className="smart-factory-img smart-factory-layout-7"
-            ></img>
+            <div className="factory-second-bottom-right-content">
+              <img
+                src={layoutSmartFactory1}
+                alt=""
+                className="smart-factory-img smart-factory-layout-1"
+              ></img>
+              <img
+                src={layoutSmartFactory2}
+                alt=""
+                className="smart-factory-img smart-factory-layout-2"
+              ></img>
+              <img
+                src={layoutSmartFactory3}
+                alt=""
+                className="smart-factory-img smart-factory-layout-3"
+              ></img>
+              <img
+                src={layoutSmartFactory4}
+                alt=""
+                className="smart-factory-img smart-factory-layout-4"
+              ></img>
+              <img
+                src={layoutSmartFactory5}
+                alt=""
+                className="smart-factory-img smart-factory-layout-5"
+              ></img>
+              <img
+                src={layoutSmartFactory6}
+                alt=""
+                className="smart-factory-img smart-factory-layout-6"
+              ></img>
+              <img
+                src={layoutSmartFactory7}
+                alt=""
+                className="smart-factory-img smart-factory-layout-7"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
