@@ -297,66 +297,31 @@ const SectionSmartFactory = () => {
               </p>
             </div>
           </div>
-          <div className="factory-second-bottom-right-content">
-            <img
-              src={layoutSmartFactory1}
-              alt=""
-              className="smart-factory-img smart-factory-layout-1"
-            ></img>
-            <img
-              src={layoutSmartFactory2}
-              alt=""
-              className="smart-factory-img smart-factory-layout-2"
-            ></img>
-            <img
-              src={layoutSmartFactory3}
-              alt=""
-              className="smart-factory-img smart-factory-layout-3"
-            ></img>
-            <img
-              src={layoutSmartFactory4}
-              alt=""
-              className="smart-factory-img smart-factory-layout-4"
-            ></img>
-            <img
-              src={layoutSmartFactory5}
-              alt=""
-              className="smart-factory-img smart-factory-layout-5"
-            ></img>
-            <img
-              src={layoutSmartFactory6}
-              alt=""
-              className="smart-factory-img smart-factory-layout-6"
-            ></img>
-            <img
-              src={layoutSmartFactory7}
-              alt=""
-              className="smart-factory-img smart-factory-layout-7"
-            ></img>
-          </div>
         </div>
       </div>
       <div className="smart-factory-slider">
-        {/* <ul className="carousel__list">
-          <li className="carousel__item" data-pos="-2">
-            1
-          </li>
-          <li className="carousel__item" data-pos="-1">
-            2
-          </li>
-
-          <li className="carousel__item" data-pos="0">
-            3
-          </li>
-          <li className="carousel__item" data-pos="1">
-            4
-          </li>
-          <li className="carousel__item" data-pos="2">
-            0
-          </li>
-
-          <BuildArrowCarousel funcPrev={handlePrev} funcNext={handleNext} />
-        </ul> */}
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={40}
+          centeredSlides={true}
+          grabCursor={true}
+          loop={true}
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
+          }}
+        >
+          {listSlide.map((slide) => (
+            <SwiperSlide key={slide.id} className="swiper-smart-factory-img">
+              <div className="swiper-item-wrap">
+                <div className="item-wrap">
+                  <img src={slide.img} alt="" />
+                </div>
+              </div>
+              <div className="item-border"></div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
