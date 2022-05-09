@@ -1,4 +1,7 @@
 // Home Page Version 3
+/*
+* 0. Core
+*/
 p,
 span,
 h1,
@@ -6,12 +9,80 @@ h2,
 h3,
 h4 {
   display: block;
-  margin-bottom: 0px !important;
+  margin-bottom: 0px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+h4.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+span.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  min-height: 57px;
+  min-width: 214px;
+}
+
+/* 
+* 1. Header Page
+*/
+.home-page-v3 {
+  margin-top: 80px;
+}
+.home-page-tag {
+  background: #000e28;
+  padding: 49px 20px;
+}
+.group-contact-header {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  span {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+    /* identical to box height, or 48px */
+    color: #ffffff;
+  }
+}
+
+.card-sub-tag {
+  padding: 20px;
+  background-color: #44a9fe;
+  &:nth-child(2) {
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+  }
+}
+
+.group-service-tag {
+  margin-top: -12%;
+  position: relative;
+  z-index: 2;
+  transition-duration: 0.3s;
 }
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
 .p-left-right {
@@ -23,53 +94,54 @@ img {
   margin: 0 auto;
   width: 100%;
 }
-.bg-ground-help-more {
-  margin: 120px auto;
-  .help-more-cards {
-    margin-top: 28.5px;
-  }
 
-  .help-more-card {
-    text-align: center;
-    border: 1px solid #6fc0fe;
-    box-sizing: border-box;
-    border-radius: 16px;
-    padding: 34px 0;
-  }
-
-  .help-more-card-image {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
-  }
-
-  .help-more-card-title {
-    margin: 16px 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 133%;
-    text-align: center;
-    text-transform: capitalize;
-
-    background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .help-more-card-des {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 133%;
-    text-align: center;
-    color: #59637e;
-    margin-bottom: 12px;
-    max-width: 366px;
-    margin: auto;
-    padding-bottom: 34px;
-  }
+.help-more-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
+.help-more-card {
+  text-align: center;
+  border: 1px solid #6fc0fe;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 34px 0;
+  margin-top: 28.5px;
+}
+
+.help-more-card-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.help-more-card-title {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  text-align: center;
+  text-transform: capitalize;
+
+  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-more-card-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  color: #59637e;
+  margin-bottom: 12px;
+  max-width: 366px;
+  margin: auto;
+  padding-bottom: 34px;
+}
+
 .row-line-center {
   .title-eng-line-center {
     font-style: normal;
@@ -89,10 +161,13 @@ img {
     text-align: center;
     color: #2c2d2e;
   }
+
   .img-line-center {
-    margin: 16px auto 36px;
+    margin-top: 16px;
   }
+
   .description-line-center {
+    margin-top: 14px;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -107,15 +182,14 @@ img {
 .bg-ground-feature-project {
   background: #f3f9ff;
   .feature-project-container {
-    padding: 120px 20px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .options {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    margin-left: -20px;
-    margin-right: -20px;
     margin-top: 22px;
     min-width: 600px;
     height: 532px;
@@ -166,7 +240,6 @@ img {
       }
       &:not(.active) {
         flex-grow: 1;
-
         border-radius: 30px;
         .shadow {
           bottom: -40px;
@@ -244,7 +317,8 @@ img {
 //---------------------------------------------------------------End Section Feature Project-------------------------------------------------
 
 .bg-ground-smart-lighting {
-  margin: 60px auto 120px;
+  padding-top: 60px;
+  padding-bottom: 120px;
   .smart-lighting-des {
     font-weight: 500;
     font-size: 16px;
@@ -267,37 +341,25 @@ img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
     .smart-lighting-card {
-      // margin: 0 auto;
       max-width: 100px;
+
       .smart-lighting-top {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100px;
         width: 100px;
-
-        // margin: 0 auto;
-        .smart-lighting-img {
-        }
       }
-      .smart-lighting-bottom {
-        // padding: 8px 40px 0;
-        // max-width: 81px;
-        .smart-lighting-content {
-          /* BodyText 1/Medium */
 
-          font-family: "SVN-Gilroy";
+      .smart-lighting-bottom {
+        .smart-lighting-content {
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
-          /* or 150% */
-
           text-align: center;
-
-          /* Light mode/Gray/gray_700 */
-
           color: #454647;
           padding: 8px 8px;
         }
@@ -358,7 +420,6 @@ img {
   .advise-now-btn span,
   .learn-more-btn span {
     font-size: 12px !important;
-    // display: none !important;
   }
 }
 @media only screen and (max-width: 390px) {
@@ -374,7 +435,6 @@ img {
 //---------------------------------------------------------------Begin Section Smart Parking-------------------------------------------------
 .bg-ground-smart-parking {
   border: 1px solid #e1e3e6;
-  margin-top: 200px;
   padding: 60px 0;
   .smart-parking-group-img {
     margin: 0 auto;
