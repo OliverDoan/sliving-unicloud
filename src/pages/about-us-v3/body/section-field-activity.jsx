@@ -33,49 +33,53 @@ function SectionActivity() {
       title: "Chứng nhận CE-FCC",
     },
   ];
+  const listActivity = [
+    {
+      id: 1,
+      linkIconLogo: iconActivity1,
+      title: "Fintech",
+    },
+    {
+      id: 2,
+      linkIconLogo: iconActivity2,
+      title: "Smart City",
+    },
+    {
+      id: 3,
+      linkIconLogo: iconActivity3,
+      title: "Digital Tranformation",
+    },
+    {
+      id: 4,
+      linkIconLogo: iconActivity4,
+      title: "Virtual Reality - VR",
+    },
+  ];
   return (
     <section className="bg-section-activity">
-      {/* <div className="a">
-        <Image src={a} />
-      </div> */}
-      <Container className="max-width-1180 p-left-right section-activity-container">
+      <Container className="p-left-right section-activity-container">
         <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
-        <Row md={4} xs={2} className="activity-row">
-          <Col>
-            <div className="activity-card">
-              <div className="activity-card-img">
-                <Image src={iconActivity1} />
-              </div>
-              <span className="activity-card-title">Fintech</span>
-            </div>
-          </Col>
-          <Col>
-            <div className="activity-card">
-              <div className="activity-card-img">
-                <Image src={iconActivity2} />
-              </div>
-              <span className="activity-card-title">Smart City</span>
-            </div>
-          </Col>
-          <Col>
-            <div className="activity-card">
-              <div className="activity-card-img">
-                <Image src={iconActivity3} />
-              </div>
-              <span className="activity-card-title">Digital Tranformation</span>
-            </div>
-          </Col>
-          <Col>
-            <div className="activity-card">
-              <div className="activity-card-img">
-                <Image src={iconActivity4} />
-              </div>
-              <span className="activity-card-title">Virtual Reality - VR</span>
-            </div>
-          </Col>
-        </Row>
+        <div className="max-width-1390 p-relative">
+          <div className="p-absolute">
+            <Image src={a} />
+          </div>
+          <Row md={4} xs={2} className="activity-row max-width-1180 ">
+            {listActivity.map((item) => (
+              <Col key={item.id} className="">
+                <div className="activity-card ">
+                  <div className="activity-card-img ">
+                    <Image src={item.linkIconLogo} />
+                  </div>
+                  {/* <span className="activity-card-title ">{item.title}</span> */}
+                </div>
+
+                
+              </Col>
+            ))}
+          </Row>
+        </div>
         <h3 className="section-activity-title">Chứng Nhận</h3>
-        <Row md={4} xs={2} className="gx-4 gy-4">
+        <Row md={4} xs={2} className="gx-4 gy-4 max-width-1180 ">
           {listCertification.map((item) => (
             <Col key={item.id} className="gx-4 gy-4">
               <div className="certification-card">
