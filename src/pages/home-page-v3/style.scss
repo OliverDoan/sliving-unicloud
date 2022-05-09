@@ -114,8 +114,8 @@ img {
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    margin-left: -20px;
-    margin-right: -20px;
+    // margin-left: -20px;
+    // margin-right: -20px;
     margin-top: 22px;
     min-width: 600px;
     height: 532px;
@@ -299,7 +299,7 @@ img {
           /* Light mode/Gray/gray_700 */
 
           color: #454647;
-          padding: 8px 8px;
+          padding: 0 8px;
         }
       }
     }

@@ -5,9 +5,9 @@ import SmartHomePage from "./pages/smart-home-v3";
 function App() {
   return (
     <>
-      {/* <IndexPage /> */}
+      <IndexPage />
       {/* <AboutPage /> */}
-      <SmartHomePage />
+      {/* <SmartHomePage /> */}
     </>
   );
 }
