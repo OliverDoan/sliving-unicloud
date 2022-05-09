@@ -285,16 +285,55 @@ const SectionSmartFactory = () => {
         </div>
 
         <div className="factory-second-bottom-content">
-          <div className="factory-second-bottom-left-content">
-            <div className="factory-second-produce-content">
-              <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
-              <p className="factory-first-desc">
-                Unicloud Group đã nghiên cứu, sản xuất và cho ra đời các thiết
-                bị và giải pháp phần mềm thông minh phục vụ nhu cầu kinh doanh
-                đa dạng của doanh nghiệp. Các sản phẩm mà Unicloud tự sản xuất
-                được thử nghiệm, thẩm định nghiêm ngặt để đảm bảo chất lượng và
-                độ tin cậy cao trước khi đưa ra thị trường.
-              </p>
+          <div className="content-wrap">
+            <div className="factory-second-bottom-left-content">
+              <div className="factory-second-produce-content">
+                <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
+                <p className="factory-first-desc">
+                  Unicloud Group đã nghiên cứu, sản xuất và cho ra đời các thiết
+                  bị và giải pháp phần mềm thông minh phục vụ nhu cầu kinh doanh
+                  đa dạng của doanh nghiệp. Các sản phẩm mà Unicloud tự sản xuất
+                  được thử nghiệm, thẩm định nghiêm ngặt để đảm bảo chất lượng
+                  và độ tin cậy cao trước khi đưa ra thị trường.
+                </p>
+              </div>
+            </div>
+            <div className="factory-second-bottom-right-content">
+              <img
+                src={layoutSmartFactory1}
+                alt=""
+                className="smart-factory-img smart-factory-layout-1"
+              ></img>
+              <img
+                src={layoutSmartFactory2}
+                alt=""
+                className="smart-factory-img smart-factory-layout-2"
+              ></img>
+              <img
+                src={layoutSmartFactory3}
+                alt=""
+                className="smart-factory-img smart-factory-layout-3"
+              ></img>
+              <img
+                src={layoutSmartFactory4}
+                alt=""
+                className="smart-factory-img smart-factory-layout-4"
+              ></img>
+              <img
+                src={layoutSmartFactory5}
+                alt=""
+                className="smart-factory-img smart-factory-layout-5"
+              ></img>
+              <img
+                src={layoutSmartFactory6}
+                alt=""
+                className="smart-factory-img smart-factory-layout-6"
+              ></img>
+              <img
+                src={layoutSmartFactory7}
+                alt=""
+                className="smart-factory-img smart-factory-layout-7"
+              ></img>
             </div>
           </div>
         </div>
