@@ -54,8 +54,12 @@ const SectionIntro = () => {
         {
           id: 0,
           content:
-            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế " +
-            "số, Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
+            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế số.",
+        },
+        {
+          id: 1,
+          content:
+            "Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
         },
       ],
     },
@@ -91,7 +95,7 @@ const SectionIntro = () => {
       <div className="intro-container-v3">
         <div className="intro-top-content">
           <h5 className="intro-title-v3 text-uppercase">ABOUT US</h5>
-          <h3 className="intro-subtitle-v3">Giới thiệu tổng quan</h3>
+          <h3 className="intro-subtitle-v3">Giới Thiệu Tổng Quan</h3>
           <Divider />
         </div>
         <div className="intro-bottom-content">
