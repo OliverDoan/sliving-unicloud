@@ -2,6 +2,10 @@
 /*
 * 0. Core
 */
+body {
+  font-family: "SVN-Gilroy";
+}
+
 p,
 span,
 h1,
@@ -22,6 +26,15 @@ img {
   display: block;
 }
 
+h3.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2b2b33;
+}
+
 h4.detail-v3 {
   font-family: "SVN-Gilroy";
   font-style: normal;
@@ -33,15 +46,50 @@ h4.detail-v3 {
   margin-top: 10px;
   margin-bottom: 6px;
 }
+
+h5.detail-sub-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
 span.detail-v3 {
   font-family: "SVN-Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 133%;
-  color: #ffffff;
-  min-height: 57px;
-  min-width: 214px;
+  color: #212633;
+  margin-bottom: 18px;
+}
+
+.btn-gradient-blue {
+  width: fit-content;
+  height: 50px;
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+  border-radius: 68px;
+  border: none;
+  padding: 8px 64px;
+  span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 133%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container-v3 {
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 
@@ -85,19 +133,26 @@ span.detail-v3 {
   transition-duration: 0.3s;
 }
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
-.p-left-right {
-  padding: 0 20px;
+
+@media only screen and (max-width: 1240px) {
+  .container-v3 {
+    padding: 0px 40px;
+  }
 }
 
-.max-width-1180 {
-  max-width: 1180px;
-  margin: 0 auto;
-  width: 100%;
+@media only screen and (max-width: 768px) {
+  .container-v3 {
+    padding: 0px 20px;
+  }
 }
 
 .help-more-container {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.help-more-cards {
+  margin-top: 36px !important;
 }
 
 .help-more-card {
@@ -106,7 +161,7 @@ span.detail-v3 {
   box-sizing: border-box;
   border-radius: 16px;
   padding: 34px 0;
-  margin-top: 28.5px;
+  // margin-top: 28.5px;
 }
 
 .help-more-card-image {
@@ -167,12 +222,12 @@ span.detail-v3 {
   }
 
   .description-line-center {
-    margin-top: 14px;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
     color: #454647;
+    margin-top: 16px;
   }
 }
 
@@ -190,9 +245,11 @@ span.detail-v3 {
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    margin-top: 22px;
+    margin-top: 60px;
     min-width: 600px;
     height: 532px;
+    // margin-left: -10px;
+    // margin-right: -10px;
 
     @for $i from 1 through 4 {
       @media screen and (max-width: (798px - $i * 80)) {
@@ -319,6 +376,9 @@ span.detail-v3 {
 .bg-ground-smart-lighting {
   padding-top: 60px;
   padding-bottom: 120px;
+  .smart-lighting-row {
+    margin-top: 60px;
+  }
   .smart-lighting-des {
     font-weight: 500;
     font-size: 16px;
@@ -361,7 +421,7 @@ span.detail-v3 {
           line-height: 24px;
           text-align: center;
           color: #454647;
-          padding: 8px 8px;
+          padding: 8px 8px 0px;
         }
       }
     }
@@ -374,7 +434,12 @@ span.detail-v3 {
       }
     }
   }
+
+  .smart-lighting-img-right {
+    min-height: 625px;
+  }
 }
+
 .btn-group {
   margin: 32px 0;
   .advise-now-btn {
@@ -438,6 +503,7 @@ span.detail-v3 {
   padding: 60px 0;
   .smart-parking-group-img {
     margin: 0 auto;
+    margin-top: 60px;
   }
   .smart-parking-title {
     text-align: center;
@@ -487,3 +553,187 @@ span.detail-v3 {
   }
 }
 //---------------------------------------------------------------End Section Smart Parking-------------------------------------------------
+
+h4.title-card {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Light mode/Gray/gray_800 */
+
+  color: #2c2d2e;
+}
+/* 
+* 2. Section Solution
+*/
+.section-solution {
+  padding-top: 100px;
+  background-color: #f2f6ff;
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      &::marker {
+        display: none;
+      }
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 4px;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #454647;
+
+      &::before {
+        content: "";
+        background-image: url("../../images/icon/icon-done-check.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .section-solution-about {
+    padding-bottom: 50px;
+  }
+
+  .section-solution-sliving {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .solution-sliving-img {
+      margin-left: -95px;
+    }
+
+    .solution-sliving-card {
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .solution-sliving-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #454647;
+      padding: 0 24px;
+    }
+  }
+
+  .solution-about-img-mobile,
+  .solution-about-cap {
+    display: none !important;
+  }
+
+  .solution-about-cap {
+    padding: 12px;
+    background: #f3f9ff;
+    box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12),
+      0px 8px 16px -6px rgba(24, 39, 75, 0.08);
+    border-radius: 8px;
+    min-height: 96px;
+    .solution-about-cap-line {
+      background: #0979fd;
+      border-radius: 44.5833px;
+      // height: 100%;
+      width: 5px;
+      margin-right: 16px;
+    }
+    .solution-about-cap-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .section-solution {
+    h3.detail-v3 {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 32px;
+      color: #2c2d2e;
+    }
+
+    .solution-about-img {
+      display: none;
+    }
+
+    .solution-about-img-mobile,
+    .solution-about-cap {
+      display: flex !important;
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .solution-about-cap {
+      margin-bottom: 32px;
+    }
+
+    .btn-gradient-blue {
+      width: 100%;
+    }
+
+    .list-ul-li {
+      li {
+        margin-bottom: 4px;
+      }
+    }
+
+    .section-solution-sliving {
+      .solution-sliving-img {
+        display: none;
+      }
+    }
+  }
+}
+/*
+* 3. Section Product
+*/
+
+.section-product-v3 {
+  padding-top: 120px;
+}
+
+.card-product {
+  ul.card-product-content {
+    > {
+      margin-bottom: 14px;
+      div {
+        &:nth-child(1) {
+          column-gap: 10px;
+        }
+      }
+      p {
+        max-width: 480px;
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
+}

@@ -31,7 +31,7 @@ function SectionSmartParking() {
   ];
   return (
     <section className="bg-ground-smart-parking">
-      <div className="max-width-1180 p-left-right">
+      <div className="container-v3">
         <Row className="row-line-center ">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h1 className="title-line-center">
@@ -40,18 +40,18 @@ function SectionSmartParking() {
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
+          <Image src={imgSmartParking} className="smart-parking-group-img" />
+          <h2 className="smart-parking-title">
+            Ứng dụng công nghệ IoT và AI trong một giải pháp
+          </h2>
+          <p className="smart-parking-des">
+            Giải pháp bãi đỗ xe thông minh Smart Parking sử dụng các thiết bị
+            cũng như công nghệ tiên tiến giúp quản lý và vận hành bãi đỗ. Tất cả
+            được điều khiển thông qua một ứng dụng (Smart Parking App), do đội
+            ngũ chuyên viên kỹ thuật cao của Unicloud xây dựng.
+          </p>
         </Row>
 
-        <Image src={imgSmartParking} className="smart-parking-group-img" />
-        <h2 className="smart-parking-title">
-          Ứng dụng công nghệ IoT và AI trong một giải pháp
-        </h2>
-        <p className="smart-parking-des">
-          Giải pháp bãi đỗ xe thông minh Smart Parking sử dụng các thiết bị cũng
-          như công nghệ tiên tiến giúp quản lý và vận hành bãi đỗ. Tất cả được
-          điều khiển thông qua một ứng dụng (Smart Parking App), do đội ngũ
-          chuyên viên kỹ thuật cao của Unicloud xây dựng.
-        </p>
         <Row lg={4} md={4} xs={2} className="smart-parking-cards">
           {listItemCard.map((itemCard) => (
             <Col className="gx-5 gy-3">

@@ -3,10 +3,10 @@ import { Carousel, Col, Row } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import iconPhone from "@images/icon/icon-phone.svg";
-import iconSettings from "@images/icon/icon-setting.svg";
-import iconSupport from "@images/icon/icon-support.svg";
-import icon24Line from "@images/icon/icon-24h-line.svg";
+import iconPhone from "../../../images/icon/icon-phone.svg";
+import iconSettings from "../../../images/icon/icon-setting.svg";
+import iconSupport from "../../../images/icon/icon-support.svg";
+import icon24Line from "../../../images/icon/icon-24h-line.svg";
 
 const SectionHeader = () => {
   const arrService = [

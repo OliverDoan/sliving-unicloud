@@ -4,8 +4,8 @@ import AboutPage from "./pages/about-us-v3";
 function App() {
   return (
     <>
-      {/* <IndexPage /> */}
-      <AboutPage />
+      <IndexPage />
+      {/* <AboutPage /> */}
     </>
   );
 }

@@ -40,7 +40,7 @@ function SectionCustomerCentric() {
   ];
   return (
     <section className="bg-section-customer-centric">
-      <Container className="max-width-1180 p-left-right section-customer-centric">
+      <Container className="container-v3 section-customer-centric">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CUSTOMER CENTRIC</span>
           <h2 className="title-line-center">Lấy khách hàng làm trung tâm</h2>

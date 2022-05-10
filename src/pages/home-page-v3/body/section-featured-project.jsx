@@ -54,9 +54,10 @@ function SectionFeaturedProject() {
   ];
   return (
     <section className="bg-ground-feature-project">
-      <div className="max-width-1180 p-left-right feature-project-container">
+      <div className="container-v3 feature-project-container">
         <Row className="row-line-center">
-          <h1 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h1>
+          <span className="title-eng-line-center">FEATURED PROJECT</span>
+          <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật Nhất</h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
