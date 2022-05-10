@@ -13,7 +13,10 @@ img {
   max-width: 100%;
   display: block;
 }
-
+.underline-img{
+  width: 88px;
+  height: 4px;
+}
 //---------------------------------------------------------------Begin Section Header-------------------------------------------------
 .about-us-background{
   position: fixed;
@@ -21,6 +24,7 @@ img {
   left: 0%;
   z-index: -1;
   height: 400px;
+  width: 100%;
 }
 
 .about-us-v3 {
@@ -183,6 +187,7 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
   background: #f3f9ff;
+  overflow: hidden;
 }
 
 .smart-factory-container-v3 {
@@ -331,6 +336,161 @@ img {
   }
 }
 
+.smart-factory-swiper-container{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 50px;
+  width: 100%;
+}
+
+.smart-factory-slider-wrapper{
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.smart-factory-slider{
+  width: 1920px;
+}
+
+.smart-factory-layout-1 {
+  z-index: 1;
+  position: absolute;
+}
+
+.smart-factory-layout-2 {
+  z-index: 2;
+  position: absolute;
+}
+
+.smart-factory-layout-3 {
+  z-index: 3;
+  position: absolute;
+}
+
+.smart-factory-layout-4 {
+  z-index: 4;
+  position: absolute;
+}
+
+.smart-factory-layout-5 {
+  z-index: 5;
+  position: absolute;
+}
+
+.smart-factory-layout-6 {
+  z-index: 6;
+  position: absolute;
+}
+
+.smart-factory-layout-7 {
+  z-index: 7;
+  position: absolute;
+}
+//-------------Begin Section Intro-------------------------------------------------
+
+//-------------Begin Section Our Partner-------------------------------------------------
+.bg-section-our-partner {
+  background: #f3f9ff;
+  .description-line-center {
+    margin-top: 60px;
+  }
+  .our-partner-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .logo-items {
+    margin-top: 60px;
+  }
+  .logo-item-content {
+    height: 177px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+  }
+}
+//-------------End Section Our Partner-------------------------------------------------
+
+//-------------Begin Section Activity-------------------------------------------------
+.max-width-1390 {
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.bg-section-activity {
+  background-color: white;
+  .section-activity-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .section-activity-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #0979fd;
+  }
+  .activity-row {
+    // padding-top: 120px;
+    // padding-bottom: 60px;
+    position: relative;
+  }
+
+  .activity-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .activity-card-img {
+      margin: 0 auto;
+      img {
+        height: 240px;
+        width: 240px;
+      }
+    }
+    .activity-card-title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      text-align: center;
+      color: #454647;
+      margin-top: 16px;
+    }
+  }
+  .certification-card {
+    text-align: center;
+    margin-top: 60px;
+    .certification-card-img {
+      height: 120px;
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .certification-card-title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 32px;
+      text-align: center;
+      color: #454647;
+      margin-top: 29px;
+      max-width: 383px;
+    }
+  }
+}
+
 .factory-produce-content {
   min-height: 312px;
   width: 100%;
@@ -405,19 +565,29 @@ p.factory-bottom-left-content {
         width: 280px;
         z-index: 9;
         bottom: 0;
-        transition: 0.4s;
+        transition: 1.2s;
+        .swiper-item-bottom-line{
+          position: absolute;
+          width: 0%;
+          height: 0px;
+          bottom: 0;
+          background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+          border-radius: 8px;
+          transition: 1.2s;
+        }
         .item-wrap {
+          filter: brightness(.6);
           width: 480px;
-          transition: 0.4s;
+          transition: 1.2s;
           img {
             width: auto !important;
             height: 100% !important;
-            transition: 0.4s;
+            transition: 1.2s;
           }
         }
         .item-border {
           width: 0px;
-          transition: 0.4s;
+          transition: 1.2s;
         }
       }
     }
@@ -434,14 +604,24 @@ p.factory-bottom-left-content {
         width: 580px;
         z-index: 10;
         bottom: 0;
-        .item-wrap {
+        .swiper-item-bottom-line{
           position: absolute;
-          bottom: 20px;
+          width: 100%;
+          height: 8px;
+          bottom: 0;
+          background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+          border-radius: 8px;
+        }
+        //background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+        .item-wrap {
+          filter: brightness(1);
+          position: absolute;
+          bottom: 5px;
           width: 580px;
           margin-bottom: 20px;
           display: flex;
           align-items: flex-end;
-        }
+      }
       }
       .item-border {
         z-index: 10;
@@ -449,7 +629,6 @@ p.factory-bottom-left-content {
         bottom: 0;
         width: 580px;
         height: 8px;
-        background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
         border-radius: 8px;
       }
     }
@@ -505,94 +684,61 @@ p.factory-bottom-left-content {
   }
 }
 
-// .swiper-slide-next{
-//   .swiper-item-wrap{
-//     width: 56% !important;
-//     height: 80% !important;
-//     overflow: hidden;
-//   }
-// }
-// .swiper-slide-prev{
-//   .swiper-item-wrap{
-//     width: 56%;
-//     height: 80%;
-//     overflow: hidden;
-//   }
-// }
-// .swiper-slide {
-//   width: 280px ;
-//   height: 360px ;
-//   border-radius: 7px;
-//   overflow: hidden;
-// }
-// .swiper-slide img {
-//   width: 100% ;
-//   height: 100% ;
-//   border-radius: 7px;
-// }
-// .swiper-slide-prev{
-//   width: 280px !important;
-//   height: 400px !important;
-//   border-radius: 7px;
-//   overflow: hidden;
-//   margin-bottom: 40px;
-// }
-// .swiper-slide-prev img {
-//   width: 100% !important;
-//   height: 100% !important;
-//   border-radius: 7px;
-// }
-// .swiper-slide-next{
-//   width: 280px !important;
-//   height: 400px !important;
-//   border-radius: 7px;
-//   overflow: hidden;
-//   margin-bottom: 40px;
-// }
-// .swiper-slide-next img {
-//   width: 100% !important;
-//   height: 100% !important;
-//   border-radius: 7px;
-// }
-
-// .swiper-slide-active {
-//   transform: scale(1.2);
-//   // height: 600px;
-//   // width: 700px;
-//   transition: 0.4s;
-// }
-
-.smart-factory-layout-1 {
-  z-index: 1;
+.a {
   position: absolute;
+  height: 100%;
+}
+//-------------End Section Activity-------------------------------------------------
+
+//-------------Begin Section Customer Centric-------------------------------------------------
+.bg-section-customer-centric {
+  background-color: white;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .customer-centric-row {
+    margin-top: 60px;
+  }
+  .customer-centric-card {
+    display: flex;
+    margin-bottom: 16px;
+    // max-width: 570px;
+    padding: 0 24px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #e1e3e6;
+    }
+    .customer-centric-icon {
+      height: 64px;
+      width: 64px;
+    }
+    .customer-centric-content {
+      // max-width: 442px;
+      margin-left: 18px;
+      margin-bottom: 16px;
+      .customer-centric-title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        color: #0979fd;
+        padding-bottom: 8px;
+      }
+
+      .customer-centric-item {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
 }
 
-.smart-factory-layout-2 {
-  z-index: 2;
-  position: absolute;
+//-------------End Section Customer Centric-------------------------------------------------
+//-------------End Section Brand Story-------------------------------------------------
+.bg-section-brand-story
+{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #f3f9ff;
 }
-
-.smart-factory-layout-3 {
-  z-index: 3;
-  position: absolute;
-}
-
-.smart-factory-layout-4 {
-  z-index: 4;
-  position: absolute;
-}
-
-.smart-factory-layout-5 {
-  z-index: 5;
-  position: absolute;
-}
-
-.smart-factory-layout-6 {
-  z-index: 6;
-  position: absolute;
-}
-
-.smart-factory-layout-7 {
-  z-index: 7;
-  position: absolute;
-}
+//-------------End Section Brand Story-------------------------------------------------

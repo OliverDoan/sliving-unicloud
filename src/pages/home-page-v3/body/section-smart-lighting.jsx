@@ -27,7 +27,7 @@ function SectionSmartLighting() {
   ];
   return (
     <section className="bg-ground-smart-lighting">
-      <div className="max-width-1180 p-left-right">
+      <div className="max-width-1180 ">
         <Row className="row-line-center">
           <span className="title-eng-line-center">SMART LIGHTING</span>
           <h1 className="title-line-center">
