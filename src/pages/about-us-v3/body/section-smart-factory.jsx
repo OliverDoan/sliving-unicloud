@@ -95,7 +95,7 @@ const SectionSmartFactory = () => {
     { id: 2, icon: iconPCCC, title: "Chứng nhận Phòng cháy chữa cháy" },
   ];
 
-  const listSlide = useState([
+  const listSlide = [
     {
       id: 1,
       img: slideSmartFactory1,
@@ -116,7 +116,7 @@ const SectionSmartFactory = () => {
       id: 5,
       img: slideSmartFactory5,
     },
-  ]);
+  ];
 
   // const [carouselItemsState, setCarouselItemsState] = useState([]);
 

@@ -6,6 +6,11 @@ import "swiper/css/bundle";
 import SectionHeader from "./body/section-header";
 import SectionIntro from "./body/section-intro";
 import SectionSmartFactory from "./body/section-smart-factory";
+import SectionHelpMore from "../../components/help-more/section-help-more";
+import SectionOurPartner from "./body/section-our-partner";
+import SectionActivity from "./body/section-field-activity";
+import SectionCustomerCentric from "./body/section-customer-centric";
+import SectionBrandStory from "./body/section-brand-story";
 
 const AboutPage = () => {
   return (
@@ -13,6 +18,11 @@ const AboutPage = () => {
       <SectionHeader />
       <SectionIntro />
       <SectionSmartFactory />
+      <SectionBrandStory />
+      <SectionCustomerCentric />
+      <SectionActivity />
+      <SectionOurPartner />
+      <SectionHelpMore />
     </main>
   );
 };
