@@ -22,7 +22,7 @@ const AboutPage = () => {
       <SectionSmartFactory />
       <SectionActivity />
       <SectionOurPartner />
-      <SectionHelpMore />
+      {/* <SectionHelpMore />  */}
     </main>
   );
 };
