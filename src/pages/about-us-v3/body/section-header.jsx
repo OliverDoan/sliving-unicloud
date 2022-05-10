@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import background from "../../../images/about-us-v3/png/about-us-banner.png";
 
 const SectionHeader = () => {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => setOffsetY(window.scrollY);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className="about-us-v3"
-      style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
-    >
+    <header className="about-us-v3">
       <div className="about-us-content">
         <h1 className="about-us-title">VỀ CHÚNG TÔI</h1>
         <p className="about-us-subtitle">
@@ -26,6 +14,7 @@ const SectionHeader = () => {
           parking và smart security
         </p>
       </div>
+      <img className="about-us-background" src={background} />
     </header>
   );
 };
