@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useState } from "react";
+import arrowLeft from "../../../images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "../../../images/smart-home-v3/svg/arrow-right.svg";
 import styled from "styled-components";
 
 // Import Swiper React components
@@ -10,7 +12,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Pagination, Navigation, EffectCoverflow } from "swiper";
 
 // import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
@@ -90,6 +93,9 @@ export const Divider = styled("div")`
 // };
 
 const SectionSmartFactory = () => {
+  const [current, setCurrent] = useState(1);
+  const [swip, setSwip] = useState(null);
+
   const factoryItems = [
     { id: 0, icon: iconLicense, title: "Được khu Công nghệ cao cấp phép" },
     { id: 1, icon: iconSmartFactory, title: "Nhà máy thông minh 4.0" },
@@ -240,16 +246,19 @@ const SectionSmartFactory = () => {
         <div className="smart-factory-slider-wrapper">
           <div className="smart-factory-slider">
             <Swiper
+              onSwiper={setSwip}
+              onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
               effect={"coverflow"}
               grabCursor={true}
               slidesPerView={5}
               //spaceBetween={40}
               centeredSlides={true}
               loop={true}
-              pagination={{
-                clickable: true,
-                el: ".swiper-pagination",
+              navigation={{
+                nextEl: ".button-next-slider",
+                prevEl: ".button-prev-slider",
               }}
+              modules={[Pagination, Navigation, EffectCoverflow]}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
@@ -257,7 +266,6 @@ const SectionSmartFactory = () => {
                 modifier: 1,
                 slideShadows: false,
               }}
-              modules={[EffectCoverflow]}
             >
               {listSlide.map((slide) => (
                 <SwiperSlide
@@ -274,6 +282,11 @@ const SectionSmartFactory = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+          <div className="nav-swiper-box">
+            <img src={arrowLeft} alt="" className="button-prev-slider" />
+            <p className="page-current">{`${current}/${listSlide.length}`}</p>
+            <img src={arrowRight} alt="" className="button-next-slider" />
           </div>
         </div>
       </div>
