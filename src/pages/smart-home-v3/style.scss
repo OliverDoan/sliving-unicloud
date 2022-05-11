@@ -1,0 +1,108 @@
+// Smart Home Page Version 3
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  margin-bottom: 0px !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+//-------------Begin Section Products Slider-------------------------------------------------
+
+.smart-home-v3 {
+  width: 100%;
+  height: 731px;
+  display: block;
+  max-width: 100%;
+  margin-top: 80px;
+  display: flex;
+  position: relative;
+}
+
+.smart-home-bg-left {
+  width: 960px;
+  max-width: 50%;
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+  position: relative;
+}
+
+.smart-home-bg-right {
+  width: 960px;
+  background: #f3f9ff;
+  max-width: 50%;
+
+  position: relative;
+}
+
+.btn-big-arrow-left {
+  position: absolute;
+  top: 50%;
+  right: 2.5%;
+  z-index: 1;
+}
+
+.btn-big-arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 2.5%;
+  z-index: 1;
+}
+
+.products-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.product-slide-wrapper {
+  width: 100%;
+  display: none;
+}
+
+.product-slide-wrapper-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-content-container {
+  max-width: 50%;
+  width: 960px;
+  height: 100%;
+  padding: 141px 160px;
+}
+
+.product-left-content {
+  max-width: 640px;
+  height: 448px;
+  display: block;
+  overflow: hidden;
+}
+
+.right-content-container {
+  max-width: 50%;
+  width: 960px;
+  height: 100%;
+  padding: 125px 225px;
+}
+
+.product-right-content {
+  max-width: 510px;
+  height: 481px;
+  display: block;
+}
+
+// slider
+.product-left-content {
+  .swiper {
+    height: 448px;
+  }
+}
