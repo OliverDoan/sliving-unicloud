@@ -206,6 +206,7 @@ img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
 .factory-top-content {
@@ -213,7 +214,6 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
 }
 
 .factory-bottom-content {
@@ -287,22 +287,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  // justify-content: space-between;
-  // width: 200%;
   width: 190%;
   float: right;
   margin-right: 5%;
   transition: 0.4s;
 }
-// .content-wrap:hover{
-//   max-width: 190%;
-//   width: fit-content;
-//   // .factory-second-bottom-left-content{
-//   //   margin-right: 10%;
-//   // }
-// }
+.mobile-content{
+  display: none;
+}
+
 .smart-factory-img {
-  // width: 100%;
   right: 0%;
   transition: 0.4s;
   border-radius: 4px;
@@ -412,18 +406,27 @@ img {
     margin-top: 60px;
   }
   .our-partner-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 20px;
   }
   .logo-items {
     margin-top: 60px;
   }
   .logo-item-content {
-    height: 177px;
+    min-height: 110px;
     display: flex;
     justify-content: center;
-    /* text-align: center; */
     align-items: center;
+    /* text-align: center; */
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    .logo-item-img{
+      display: flex;
+      align-items: center;
+      Img{
+        object-fit: cover;
+      }
+    }
   }
 }
 //-------------End Section Our Partner-------------------------------------------------
@@ -447,6 +450,15 @@ img {
   .section-activity-container {
     padding-top: 120px;
     padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .content-container{
+      padding: 40px 0;
+      row-gap: 32px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .section-activity-title {
     font-weight: 700;
@@ -467,9 +479,10 @@ img {
     flex-direction: column;
     .activity-card-img {
       margin: 0 auto;
+      object-fit: cover;
       img {
-        height: 240px;
-        width: 240px;
+        height: 100%;
+        transition: 0.5s;
       }
     }
     .activity-card-title {
@@ -624,7 +637,6 @@ p.factory-bottom-left-content {
           background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
           border-radius: 8px;
         }
-        //background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
         .item-wrap {
           filter: brightness(1);
           position: absolute;
@@ -762,6 +774,19 @@ p.factory-bottom-left-content {
 }
 //-------------End Section Brand Story-------------------------------------------------
 
+//---------------------------------------------------------------Begin Section Help-------------------------------------------------
+.bg-ground-help-more{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  .help-more-container{
+    padding: 40px 20px;
+  }
+}
+//-------------End Section Help-------------------------------------------------
+
 //=============================Responsive=============================\\
 
 //==========================Section Intro
@@ -809,7 +834,6 @@ p.factory-bottom-left-content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 20px;
     .factory-bottom-left-content{
       max-width: 100%;
       min-height: 0;
@@ -820,6 +844,9 @@ p.factory-bottom-left-content {
         display: none;
       }
     }
+    .factory-bottom-right-content {
+      min-height: 0px;
+    }
     & > *{
       width: 100% !important;
       align-items: center;
@@ -828,4 +855,60 @@ p.factory-bottom-left-content {
       }    
     }
   }
-} 
+  .factory-second-bottom-content{
+    .content-wrap{
+      display: none;
+    }
+    .mobile-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .factory-second-produce-content{
+        max-height: 1080px;
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 550px){
+  .factory-top-content{
+    align-items: flex-start;
+  }
+}
+
+//==========================Section Activity
+@media(max-width: 768px){
+  .activity-card-img{
+    max-width: 150px;
+  }
+  .col-mw-200{
+    max-width: 200px !important;
+  }
+  .activity-row{
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .activity-card-title {
+    font-size: 16px;
+  }
+}
+@media(max-width: 992px){
+  .bg-section-activity {
+    .activity-card {
+      .activity-card-title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+//==========================Section About Us
+@media(max-width: 475px){
+  .about-us-subtitle{
+    display: none;
+  }
+}

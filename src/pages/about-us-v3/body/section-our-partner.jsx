@@ -82,7 +82,7 @@ function SectionOurPartner() {
             bền vững, tin cậy, gia tăng giá trị cho tất cả các bên.
           </p>
         </Row>
-        <Row lg={6} md={3} xs={2} className="logo-items">
+        <Row lg={6} xs={4} className="logo-items">
           {listItemLogo.map((itemLogo) => (
             <Col key={itemLogo.id} className="logo-item-content">
               <div className="logo-item-img">
