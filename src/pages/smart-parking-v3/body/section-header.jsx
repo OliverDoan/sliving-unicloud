@@ -8,7 +8,7 @@ const SmartHeader = () => {
     <div className="smart-parking-v3">
       <header className="smart-parking-header">
         <div className="smart-parking-content">
-          <div>
+          <div className="content-left">
             <div>SMART PARKING</div>
             <div>
               Smart Parking là giải pháp quản lý bãi giữ xe hiệu quả của
@@ -21,10 +21,12 @@ const SmartHeader = () => {
             </div>
           </div>
           <div>
-            <img className="back-ground-img" src={car_img} />
+            <img src={car_img} />
           </div>
         </div>
-        {/* <img className="back-ground-img" src={background} alt=""></img> */}
+        <div className="back-ground">
+          <img alt="" src={background}></img>
+        </div>
       </header>
     </div>
   );

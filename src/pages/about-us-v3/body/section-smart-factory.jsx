@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import arrowLeft from "../../../images/smart-home-v3/svg/arrow-left.svg";
-import arrowRight from "../../../images/smart-home-v3/svg/arrow-right.svg";
+import arrowLeft from "../../../images/about-us-v3/svg/arrow-left.svg";
+import arrowRight from "../../../images/about-us-v3/svg/arrow-right.svg";
 import styled from "styled-components";
 
 // Import Swiper React components
