@@ -71,7 +71,6 @@ const listSlide = [
           },
           {
             id: 1,
-
             title: "Công tắc hình vuông",
           },
         ],
@@ -217,33 +216,50 @@ const listSlide = [
     ],
     imgObject: null,
   },
-  {
-    id: 4,
-    title: "Ứng Dụng Sliving Điều Khiển Từ Xa",
-    subTitle: "SLIVING APP",
-    contents: [
-      {
-        id: 0,
-        title: "Tính năng vượt trội:",
-        desc: "Thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF. Hỗ trợ điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
-      },
-      {
-        id: 1,
-        title: "Giám sát & cảnh báo:",
-        desc: "Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời đến người dùng.",
-      },
-    ],
-    listItem: [],
-    imgObject: {
-      mainImg: switchItemTelephone,
-      backgroundImg: switchItemTelephoneBg,
-    },
-  },
 ];
 
-const SectionProductsSlider = () => {
+const SlideComponent = ({ slide }) => {
   const [swiper, setSwiper] = useState(null);
+  return (
+    <Swiper
+      navigation={{
+        prevEl: ".prev",
+        nextEl: ".next",
+      }}
+      className="banner-products-slider"
+      slidesPerView={1}
+      onSwiper={(s) => {
+        setSwiper(s);
+      }}
+    >
+      {slide?.listItem &&
+        slide?.listItem.map((slideItem) => (
+          <SwiperSlide key={slideItem.id}>
+            <div className="banner-products-container">
+              <img src={slideItem.img} alt="" />
+              <div className="banner-products-btn-group">
+                {slideItem?.titles &&
+                  slideItem?.titles.map((btnItem) => {
+                    return (
+                      <div
+                        className="products-btn-item"
+                        onClick={() => {
+                          swiper.slideTo(btnItem.id);
+                        }}
+                      >
+                        {btnItem.title}
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+    </Swiper>
+  );
+};
 
+const SectionProductsSlider = () => {
   const [toggleState, setToggleState] = useState(0);
 
   const increaseToggleTab = () => {
@@ -287,43 +303,7 @@ const SectionProductsSlider = () => {
           >
             <div className="left-content-container">
               <div className="product-left-content">
-                <Swiper
-                  navigation={{
-                    prevEl: ".prev",
-                    nextEl: ".next",
-                  }}
-                  className="banner-products-slider"
-                  slidesPerView={1}
-                  onSwiper={(s) => {
-                    setSwiper(s);
-                  }}
-                >
-                  {slide?.listItem &&
-                    slide?.listItem.map((slideItem) => (
-                      <SwiperSlide key={slideItem.id}>
-                        <div className="banner-products-container">
-                          <img
-                            src={slideItem.img}
-                            alt=""
-                            onClick={() => {
-                              swiper.slideNext();
-                              console.log(swiper);
-                            }}
-                          />
-                          <div className="banner-products-btn-group">
-                            {slideItem?.titles &&
-                              slideItem?.titles.map((btnItem) => {
-                                return (
-                                  <div className="products-btn-item">
-                                    {btnItem.title}
-                                  </div>
-                                );
-                              })}
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                </Swiper>
+                <SlideComponent slide={slide} />
               </div>
             </div>
 
@@ -339,12 +319,7 @@ const SectionProductsSlider = () => {
                     </p>
                   ))}
                 <div className="btn-group">
-                  <button
-                    className="advise-now-btn"
-                    onClick={() => {
-                      swiper.slideNext();
-                    }}
-                  >
+                  <button className="advise-now-btn">
                     <span>Tư vấn ngay</span>
                   </button>
                   <button type="button" className="learn-more-btn">

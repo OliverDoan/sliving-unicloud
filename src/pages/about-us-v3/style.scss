@@ -18,6 +18,26 @@ img {
   height: 4px;
 }
 
+.container-v3 {
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .container-v3 {
+    padding: 0px 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-v3 {
+    padding: 0px 20px;
+  }
+}
+.max-width-1180 {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
 
 //---------------------------------------------------------------Begin Section Header-------------------------------------------------
 .about-us-background{
@@ -78,7 +98,7 @@ img {
 
 //---------------------------------------------------------------Begin Section Intro-------------------------------------------------
 .section-intro-v3 {
-  padding-top: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
   background-color: white;
 }
 
@@ -175,7 +195,7 @@ img {
 
 .intro-bottom-content {
   padding-top: 60px;
-  padding-bottom: 120px;
+  padding-bottom: clamp(40px, 7vw, 120px);
   display: grid;
 }
 
@@ -192,8 +212,8 @@ img {
 
 //---------------------------------------------------------------Begin Section Smart Factory-------------------------------------------------
 .section-smart-factory-v3 {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
+  padding-bottom: clamp(40px, 7vw, 120px);
   background: #f3f9ff;
   overflow: hidden;
   // & > * {
@@ -564,7 +584,7 @@ img {
     margin-top: 60px;
   }
   .our-partner-container {
-    padding: 120px 20px;
+    padding: clamp(40px, 7vw, 120px) 20px;
   }
   .logo-items {
     margin-top: 60px;
@@ -606,8 +626,8 @@ img {
 .bg-section-activity {
   background-color: white;
   .section-activity-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: clamp(40px, 7vw, 120px);
+    padding-bottom: clamp(40px, 7vw, 120px);
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -626,7 +646,7 @@ img {
     color: #0979fd;
   }
   .activity-row {
-    // padding-top: 120px;
+    // padding-top: clamp(40px, 7vw, 120px);
     // padding-bottom: 60px;
     position: relative;
   }
@@ -740,8 +760,8 @@ p.factory-bottom-left-content {
 //-------------Begin Section Customer Centric-------------------------------------------------
 .bg-section-customer-centric {
   background-color: white;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
+  padding-bottom: clamp(40px, 7vw, 120px);
   .customer-centric-row{
     margin: 60px 0 0 0;
   }
@@ -783,8 +803,8 @@ p.factory-bottom-left-content {
 //-------------End Section Customer Centric-------------------------------------------------
 //-------------End Section Brand Story-------------------------------------------------
 .bg-section-brand-story{
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: clamp(40px, 7vw, 120px);
+  padding-bottom: clamp(40px, 7vw, 120px);
   background-color: #f3f9ff;
 }
 
@@ -805,7 +825,7 @@ p.factory-bottom-left-content {
   justify-content: center;
   background-color: white;
   .help-more-container{
-    padding: 40px 20px;
+    padding: clamp(40px, 7vw, 120px) 20px;
   }
 }
 //-------------End Section Help-------------------------------------------------
@@ -909,7 +929,7 @@ p.factory-bottom-left-content {
     max-width: 150px;
   }
   .col-mw-200{
-    max-width: 200px !important;
+    max-width: 180px !important;
   }
   .activity-row{
     align-items: center;

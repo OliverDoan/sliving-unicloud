@@ -40,7 +40,7 @@ function SectionCustomerCentric() {
   ];
   return (
     <section className="bg-section-customer-centric">
-      <Container className="max-width-1180  section-customer-centric">
+      <div className="max-width-1180  section-customer-centric container-v3">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CUSTOMER CENTRIC</span>
           <h2 className="title-line-center">Lấy khách hàng làm trung tâm</h2>
@@ -68,7 +68,7 @@ function SectionCustomerCentric() {
             <img src={imgCustomerCentric} />
           </Col>
         </Row>
-      </Container>
+      </div>
     </section>
   );
 }

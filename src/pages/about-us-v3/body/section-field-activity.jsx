@@ -57,7 +57,7 @@ function SectionActivity() {
   ];
   return (
     <section className="bg-section-activity">
-      <Container className="section-activity-container">
+      <div className="section-activity-container">
         <div className="content-container ">
           <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
           <div className="max-width-1390 p-relative">
@@ -94,7 +94,7 @@ function SectionActivity() {
             ))}
           </Row>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

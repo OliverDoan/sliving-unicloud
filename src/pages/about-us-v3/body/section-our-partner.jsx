@@ -67,7 +67,7 @@ function SectionOurPartner() {
   ];
   return (
     <section className="bg-section-our-partner">
-      <Container className="max-width-1180  our-partner-container">
+      <div className="max-width-1180  our-partner-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">OUR PARTNER</span>
           <h2 className="title-line-center">Đối tác của chúng tôi</h2>
@@ -91,7 +91,7 @@ function SectionOurPartner() {
             </Col>
           ))}
         </Row>
-      </Container>
+      </div>
     </section>
   );
 }
