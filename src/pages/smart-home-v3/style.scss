@@ -37,7 +37,6 @@ img {
   width: 960px;
   background: #f3f9ff;
   max-width: 50%;
-
   position: relative;
 }
 
@@ -60,11 +59,13 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .product-slide-wrapper {
   width: 100%;
   display: none;
+  height: 100%;
 }
 
 .product-slide-wrapper-active {
@@ -77,32 +78,198 @@ img {
   max-width: 50%;
   width: 960px;
   height: 100%;
-  padding: 141px 160px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-left-content {
   max-width: 640px;
   height: 448px;
-  display: block;
-  overflow: hidden;
+  margin: auto;
 }
 
 .right-content-container {
   max-width: 50%;
   width: 960px;
   height: 100%;
-  padding: 125px 225px;
 }
 
 .product-right-content {
   max-width: 510px;
-  height: 481px;
-  display: block;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-right-all-contents {
+  max-width: 100%;
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #454647;
+}
+
+.product-right-all-contents > p:not(:last-child) {
+  margin-bottom: 8px !important;
+}
+
+.product-right-desc-container {
+  font-weight: 500;
+}
+
+.product-right-main-title {
+  font-weight: 700;
+}
+
+.product-right-title {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2c2d2e;
+  margin-top: 16px;
+}
+
+.product-right-subtitle {
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
+
+.product-right-divider {
+  width: 88px;
+  height: 4px;
+  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+  border-radius: 200px;
+  margin: 16px 0px;
+}
+
+.product-right-main-title {
+  display: inline-block;
+}
+
+// phone img object
+.product-phone-wrapper {
+  position: relative;
+  margin: auto;
+  max-height: 534px;
+  z-index: 1;
+}
+
+.download-apps-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 139px;
+  bottom: -5%;
+  z-index: 2;
+}
+
+.download-app-item {
+  max-width: 251px;
+  max-height: 100%;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+    0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+}
+
+.download-app-img {
+  border-radius: 6px;
 }
 
 // slider
 .product-left-content {
   .swiper {
-    height: 448px;
+    min-height: 360px;
+  }
+}
+
+.banner-products-slider {
+  .swiper-slide {
+    max-height: 360px;
+  }
+}
+
+.banner-products-btn-group {
+  margin-top: 49px;
+  display: flex;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  min-height: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.products-btn-item {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "SVN Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  background: none;
+}
+
+.products-btn-item.active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.product-item-title {
+  padding: 8px 0px;
+}
+
+// animation fade up
+// left-content-animate left-content-fadeUp
+
+.products-slider {
+  .animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes fadeUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 20%, 0);
+      transform: translate3d(0, 20%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 20%, 0);
+      transform: translate3d(0, 20%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .fadeUp {
+    -webkit-animation-name: fadeUp;
+    animation-name: fadeUp;
   }
 }
