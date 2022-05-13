@@ -9,8 +9,8 @@ const SmartHeader = () => {
       <header className="smart-parking-header">
         <div className="smart-parking-content">
           <div className="content-left">
-            <div>SMART PARKING</div>
-            <div>
+            <div className="content-left-title">SMART PARKING</div>
+            <div className="content-left-text">
               Smart Parking là giải pháp quản lý bãi giữ xe hiệu quả của
               Unicloud được ứng dụng trong hệ thống chung cư, tòa nhà, trung tâm
               thương mại. Người dùng có thể sử dụng Smart Parking App để quản lý
@@ -20,14 +20,14 @@ const SmartHeader = () => {
               nghi.
             </div>
           </div>
-          <div>
-            <img src={car_img} />
+          <div className="content-right">
+            <img className="content-right__img" src={car_img} />
           </div>
         </div>
-        <div className="back-ground">
-          <img alt="" src={background}></img>
-        </div>
       </header>
+      <div className="back-ground">
+        <img alt="" src={background} className="back-ground__img"></img>
+      </div>
     </div>
   );
 };
