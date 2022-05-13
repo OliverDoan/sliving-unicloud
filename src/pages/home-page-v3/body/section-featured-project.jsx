@@ -54,7 +54,7 @@ function SectionFeaturedProject() {
   ];
   return (
     <section className="bg-ground-feature-project">
-      <div className="max-width-1180 p-left-right feature-project-container">
+      <div className="max-width-1180  feature-project-container">
         <Row className="row-line-center">
           <h1 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h1>
           <div className="img-line-center d-flex justify-content-center">

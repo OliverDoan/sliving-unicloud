@@ -17,9 +17,9 @@ const AboutPage = () => {
     <main>
       <SectionHeader />
       <SectionIntro />
-      <SectionSmartFactory />
       <SectionBrandStory />
       <SectionCustomerCentric />
+      <SectionSmartFactory />
       <SectionActivity />
       <SectionOurPartner />
       <SectionHelpMore />

@@ -40,12 +40,12 @@ function SectionCustomerCentric() {
   ];
   return (
     <section className="bg-section-customer-centric">
-      <Container className="max-width-1180 p-left-right section-customer-centric">
+      <div className="max-width-1180  section-customer-centric container-v3">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CUSTOMER CENTRIC</span>
           <h2 className="title-line-center">Lấy khách hàng làm trung tâm</h2>
           <div className="img-line-center d-flex justify-content-center">
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+            <img className="underline-img" src={imgUnderLine} />
           </div>
         </Row>
         <Row md={2} xs={1} className="customer-centric-row">
@@ -53,7 +53,7 @@ function SectionCustomerCentric() {
             {listCertification.map((item) => (
               <div className="customer-centric-card" key={item.id}>
                 <div className="customer-centric-icon">
-                  <Image src={item.linkImg} />
+                  <img src={item.linkImg} />
                 </div>
                 <div className="customer-centric-content">
                   <h4 className="customer-centric-title">{item.title}</h4>
@@ -65,10 +65,10 @@ function SectionCustomerCentric() {
             ))}
           </Col>
           <Col>
-            <Image src={imgCustomerCentric} />
+            <img src={imgCustomerCentric} />
           </Col>
         </Row>
-      </Container>
+      </div>
     </section>
   );
 }

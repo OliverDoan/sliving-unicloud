@@ -1,4 +1,5 @@
 import React from "react";
+import background from "../../../images/about-us-v3/png/about-us-banner.png";
 
 const SectionHeader = () => {
   return (
@@ -13,6 +14,7 @@ const SectionHeader = () => {
           parking và smart security
         </p>
       </div>
+      <img className="about-us-background" src={background} />
     </header>
   );
 };

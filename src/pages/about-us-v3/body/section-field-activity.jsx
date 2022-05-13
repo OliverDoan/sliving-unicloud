@@ -57,41 +57,44 @@ function SectionActivity() {
   ];
   return (
     <section className="bg-section-activity">
-      <Container className="p-left-right section-activity-container">
-        <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
-        <div className="max-width-1390 p-relative">
-          <div className="p-absolute">
-            <Image src={a} />
+      <div className="section-activity-container">
+        <div className="content-container ">
+          <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
+          <div className="max-width-1390 p-relative">
+            <Row md={4} xs={2} className="activity-row max-width-1180 ">
+              {listActivity.map((item) => (
+                <Col key={item.id} className="col-mw-200">
+                  <div className="activity-card">
+                    <div className="activity-card-img">
+                      <Image src={item.linkIconLogo} />
+                    </div>
+                    <span className="activity-card-title ">{item.title}</span>
+                  </div>
+                </Col>
+              ))}
+            </Row>
           </div>
-          <Row md={4} xs={2} className="activity-row max-width-1180 ">
-            {listActivity.map((item) => (
-              <Col key={item.id} className="">
-                <div className="activity-card ">
-                  <div className="activity-card-img ">
+        </div>
+        <div className="content-container">
+          <h3 className="section-activity-title">Chứng Nhận</h3>
+          <Row
+            md={4}
+            xs={2}
+            className="max-width-1180 d-flex justify-content-center"
+          >
+            {listCertification.map((item) => (
+              <Col>
+                <div className="certification-card">
+                  <div className="certification-card-img">
                     <Image src={item.linkIconLogo} />
                   </div>
-                  {/* <span className="activity-card-title ">{item.title}</span> */}
+                  <span className="certification-card-title">{item.title}</span>
                 </div>
-
-                
               </Col>
             ))}
           </Row>
         </div>
-        <h3 className="section-activity-title">Chứng Nhận</h3>
-        <Row md={4} xs={2} className="gx-4 gy-4 max-width-1180 ">
-          {listCertification.map((item) => (
-            <Col key={item.id} className="gx-4 gy-4">
-              <div className="certification-card">
-                <div className="certification-card-img">
-                  <Image src={item.linkIconLogo} />
-                </div>
-                <span className="certification-card-title">{item.title}</span>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -5,13 +5,13 @@ import imgBrandStory from "../../../images/about-us-v3/png/img-brand-story.png";
 
 function SectionBrandStory() {
   return (
-    <section className="bg-section-brand-story">
-      <Container className="max-width-1180 p-left-right">
+    <section className="bg-section-brand-story container-v3">
+      <div className="max-width-1180 brand-story-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">BRAND STORY</span>
           <h2 className="title-line-center">Câu chuyện thương hiệu</h2>
           <div className="img-line-center d-flex justify-content-center">
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+            <img src={imgUnderLine} className="underline-img" />
           </div>
           <p className="description-line-center">
             Unicloud là một tập đoàn công nghệ quốc tế có trụ sở tại Hà Nội, nhà
@@ -23,9 +23,9 @@ function SectionBrandStory() {
           </p>
         </Row>
         <div className="brand-story-img">
-          <Image src={imgBrandStory} />
+          <img src={imgBrandStory} />
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

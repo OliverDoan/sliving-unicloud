@@ -67,7 +67,7 @@ function SectionOurPartner() {
   ];
   return (
     <section className="bg-section-our-partner">
-      <Container className="max-width-1180 p-left-right our-partner-container">
+      <div className="max-width-1180  our-partner-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">OUR PARTNER</span>
           <h2 className="title-line-center">Đối tác của chúng tôi</h2>
@@ -82,7 +82,7 @@ function SectionOurPartner() {
             bền vững, tin cậy, gia tăng giá trị cho tất cả các bên.
           </p>
         </Row>
-        <Row lg={6} md={3} xs={2} className="logo-items">
+        <Row lg={6} xs={4} className="logo-items">
           {listItemLogo.map((itemLogo) => (
             <Col key={itemLogo.id} className="logo-item-content">
               <div className="logo-item-img">
@@ -91,7 +91,7 @@ function SectionOurPartner() {
             </Col>
           ))}
         </Row>
-      </Container>
+      </div>
     </section>
   );
 }

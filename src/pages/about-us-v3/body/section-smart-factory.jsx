@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useState } from "react";
+import arrowLeft from "../../../images/about-us-v3/svg/arrow-left.svg";
+import arrowRight from "../../../images/about-us-v3/svg/arrow-right.svg";
 import styled from "styled-components";
 
 // Import Swiper React components
@@ -10,7 +12,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Pagination, Navigation, EffectCoverflow } from "swiper";
 
 // import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
@@ -59,6 +62,7 @@ import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 // import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
 
+import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
 export const Divider = styled("div")`
   width: 88px;
   height: 4px;
@@ -89,6 +93,9 @@ export const Divider = styled("div")`
 // };
 
 const SectionSmartFactory = () => {
+  const [current, setCurrent] = useState(1);
+  const [swip, setSwip] = useState(null);
+
   const factoryItems = [
     { id: 0, icon: iconLicense, title: "Được khu Công nghệ cao cấp phép" },
     { id: 1, icon: iconSmartFactory, title: "Nhà máy thông minh 4.0" },
@@ -117,124 +124,6 @@ const SectionSmartFactory = () => {
       img: slideSmartFactory5,
     },
   ];
-
-  // const [carouselItemsState, setCarouselItemsState] = useState([]);
-
-  // const [carouselModel, setCarouselModel] = useState({});
-
-  // const getPos = (current, active) => {
-  //   const diff = current - active;
-
-  //   if (Math.abs(current - active) > 2) {
-  //     return -current;
-  //   }
-
-  //   return diff;
-  // };
-
-  // const update = (elems, newActive) => {
-  //   const newActivePos = newActive.dataset.pos;
-
-  //   const current = elems.find((elem) => elem.dataset.pos === "0");
-  //   const prev = elems.find((elem) => elem.dataset.pos === "-1");
-  //   const next = elems.find((elem) => elem.dataset.pos === "1");
-  //   const first = elems.find((elem) => elem.dataset.pos === "-2");
-  //   const last = elems.find((elem) => elem.dataset.pos === "2");
-
-  //   current.classList.remove("carousel__item_active");
-
-  //   window.setTimeout(() => {
-  //     elems.forEach((value) => {
-  //       const element = value;
-  //       if (element.dataset.pos === "-1" || element.dataset.pos === "1") {
-  //         element.style.zIndex = "4";
-  //       } else {
-  //         element.style.zIndex = "unset";
-  //       }
-  //     });
-  //   }, 300);
-
-  //   [current, prev, next, first, last].forEach((item) => {
-  //     const itemPos = item.dataset.pos;
-  //     if (itemPos === 0) return;
-  //     item.dataset.pos = getPos(itemPos, newActivePos).toString();
-  //     if (
-  //       getPos(itemPos, newActivePos).toString() === "-1" ||
-  //       getPos(itemPos, newActivePos).toString() === "1"
-  //     ) {
-  //       item.style.zIndex = "4";
-  //     } else {
-  //       item.style.zIndex = "unset";
-  //     }
-  //   });
-  // };
-
-  // const updatePost = (element, list) => {
-  //   element.click();
-  // };
-
-  // // Function Click Slide in Desktop
-  // const handlePrev = useCallback(() => {
-  //   const prev = carouselItemsState?.find((elem) => elem.dataset.pos === "-1");
-  //   const prevNumber = parseInt(prev.innerHTML, 10);
-  //   setCarouselModel(listSlide[prevNumber]);
-  //   updatePost(prev, carouselItemsState);
-  // }, [carouselModel, carouselItemsState]);
-
-  // const handleNext = useCallback(() => {
-  //   const next = carouselItemsState?.find((elem) => elem.dataset.pos === "1");
-  //   const prevNumber = parseInt(next.innerHTML, 10);
-  //   setCarouselModel(listSlide[prevNumber]);
-  //   updatePost(next, carouselItemsState);
-  // }, [carouselModel, carouselItemsState]);
-
-  // useEffect(() => {
-  //   // Setup Function Event in Slide
-  //   const carouselList = document.querySelector(".carousel__list");
-  //   const carouselItems = document.querySelectorAll(".carousel__item");
-  //   const elems = Array.from(carouselItems);
-  //   setCarouselItemsState(elems);
-
-  //   // Function update slide active in Desktop
-  //   const UpdateSlideWhenClick = (event) => {
-  //     event.preventDefault();
-  //     const newActive = event.target;
-  //     if (
-  //       newActive &&
-  //       newActive.innerHTML !== "" &&
-  //       newActive.innerHTML.length <= 1
-  //     ) {
-  //       const prevNumber = parseInt(newActive.innerHTML, 10);
-  //       setCarouselModel(listSlide[prevNumber]);
-  //       const isItem = newActive.closest(".carousel__item");
-  //       if (!isItem || newActive.classList.contains("carousel__item_active")) {
-  //         return;
-  //       }
-  //       update(elems, newActive);
-  //     }
-  //   };
-
-  //   carouselList?.addEventListener("click", (event) => {
-  //     const newActive = event.target;
-  //     if (
-  //       newActive &&
-  //       newActive.innerHTML !== "" &&
-  //       newActive.innerHTML.length <= 1
-  //     ) {
-  //       const prevNumber = parseInt(newActive.innerHTML, 10);
-  //       setCarouselModel(listSlide[prevNumber]);
-  //       const isItem = newActive.closest(".carousel__item");
-  //       if (!isItem || newActive.classList.contains("carousel__item_active")) {
-  //         return;
-  //       }
-  //       update(elems, newActive);
-  //     }
-  //   });
-
-  //   return () => {
-  //     carouselList?.removeEventListener("click", UpdateSlideWhenClick);
-  //   };
-  // }, []);
 
   return (
     <section className="section-smart-factory-v3">
@@ -336,31 +225,70 @@ const SectionSmartFactory = () => {
               ></img>
             </div>
           </div>
+          <div className="mobile-content">
+            <div className="factory-second-produce-content">
+              <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
+              <p className="factory-first-desc">
+                Unicloud Group đã nghiên cứu, sản xuất và cho ra đời các thiết
+                bị và giải pháp phần mềm thông minh phục vụ nhu cầu kinh doanh
+                đa dạng của doanh nghiệp. Các sản phẩm mà Unicloud tự sản xuất
+                được thử nghiệm, thẩm định nghiêm ngặt để đảm bảo chất lượng và
+                độ tin cậy cao trước khi đưa ra thị trường.
+              </p>
+            </div>
+            <div className="factory-second-produce-content">
+              <img src={smart_factory_image} />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="smart-factory-slider">
-        <Swiper
-          slidesPerView={5}
-          spaceBetween={40}
-          centeredSlides={true}
-          grabCursor={true}
-          loop={true}
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-          }}
-        >
-          {listSlide.map((slide) => (
-            <SwiperSlide key={slide.id} className="swiper-smart-factory-img">
-              <div className="swiper-item-wrap">
-                <div className="item-wrap">
-                  <img src={slide.img} alt="" />
-                </div>
-              </div>
-              <div className="item-border"></div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="smart-factory-swiper-container">
+        <div className="smart-factory-slider-wrapper">
+          <div className="smart-factory-slider">
+            <Swiper
+              onSwiper={setSwip}
+              onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
+              effect={"coverflow"}
+              grabCursor={true}
+              slidesPerView={5}
+              //spaceBetween={40}
+              centeredSlides={true}
+              loop={true}
+              navigation={{
+                nextEl: ".button-next-slider",
+                prevEl: ".button-prev-slider",
+              }}
+              modules={[Pagination, Navigation, EffectCoverflow]}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 1,
+                slideShadows: false,
+              }}
+            >
+              {listSlide.map((slide) => (
+                <SwiperSlide
+                  key={slide.id}
+                  className="swiper-smart-factory-img"
+                >
+                  <div className="swiper-item-wrap">
+                    <div className="swiper-item-bottom-line" />
+                    <div className="item-wrap">
+                      <img src={slide.img} alt="" />
+                    </div>
+                  </div>
+                  <div className="item-border"></div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="nav-swiper-box">
+            <img src={arrowLeft} alt="" className="button-prev-slider" />
+            <p className="page-current">{`${current}/${listSlide.length}`}</p>
+            <img src={arrowRight} alt="" className="button-next-slider" />
+          </div>
+        </div>
       </div>
     </section>
   );
