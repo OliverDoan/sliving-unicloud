@@ -14,7 +14,11 @@ import "swiper/css/pagination";
 // import required modules
 import "swiper/css/navigation";
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
+// swiper bundle styles
+import "swiper/css/bundle";
 
+// swiper core styles
+import "swiper/css";
 // import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
 
@@ -251,7 +255,6 @@ const SectionSmartFactory = () => {
               effect={"coverflow"}
               grabCursor={true}
               slidesPerView={5}
-              //spaceBetween={40}
               centeredSlides={true}
               loop={true}
               navigation={{
