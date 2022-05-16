@@ -132,7 +132,7 @@ span.detail-v3 {
   z-index: 2;
   transition-duration: 0.3s;
 }
-//---------------------------------------------------------------Begin Section Help More-------------------------------------------------
+//-------------------Begin Section Help More-------------------------------------------------
 
 @media only screen and (max-width: 1240px) {
   .container-v3 {
@@ -149,52 +149,47 @@ span.detail-v3 {
 .help-more-container {
   padding-top: 120px;
   padding-bottom: 120px;
-}
+  .help-more-card {
+    text-align: center;
+    border: 1px solid #6fc0fe;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 34px 0;
+    // margin-top: 28.5px;
+  }
 
-.help-more-cards {
-  margin-top: 36px !important;
-}
+  .help-more-card-image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
 
-.help-more-card {
-  text-align: center;
-  border: 1px solid #6fc0fe;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding: 34px 0;
-  // margin-top: 28.5px;
-}
+  .help-more-card-title {
+    margin: 16px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 133%;
+    text-align: center;
+    text-transform: capitalize;
 
-.help-more-card-image {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-}
+    background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-.help-more-card-title {
-  margin: 16px 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 133%;
-  text-align: center;
-  text-transform: capitalize;
-
-  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.help-more-card-des {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 133%;
-  text-align: center;
-  color: #59637e;
-  margin-bottom: 12px;
-  max-width: 366px;
-  margin: auto;
-  padding-bottom: 34px;
+  .help-more-card-des {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133%;
+    text-align: center;
+    color: #59637e;
+    // margin-bottom: 12px;
+    max-width: 366px;
+    margin: auto;
+    // padding-bottom: 34px;
+  }
 }
 
 .row-line-center {
@@ -219,6 +214,8 @@ span.detail-v3 {
 
   .img-line-center {
     margin-top: 16px;
+    display: flex;
+    justify-content: center;
   }
 
   .description-line-center {
@@ -228,6 +225,24 @@ span.detail-v3 {
     text-align: center;
     color: #454647;
     margin-top: 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .row-line-center {
+    .title-eng-line-center,
+    .title-line-center {
+      text-align: start;
+      font-size: 28px;
+    }
+    .title-eng-line-center {
+      font-size: 14px;
+    }
+    .img-line-center {
+      justify-content: normal;
+    }
+    .description-line-center {
+      display: none;
+    }
   }
 }
 
@@ -448,7 +463,7 @@ span.detail-v3 {
     background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
     border-radius: 68px;
     border: none;
-    width: 184px;
+    width: 177px;
     height: 40px;
     span {
       font-style: normal;
@@ -478,7 +493,21 @@ span.detail-v3 {
     }
   }
 }
+@media only screen and (max-width: 1180px) {
+  .advise-now-btn,
+  .learn-more-btn {
+    width: auto !important;
+  }
+  .advise-now-btn span,
+  .learn-more-btn span {
+    font-size: 12px !important;
+  }
+}
 @media only screen and (max-width: 460px) {
+  .btn-group {
+    display: flex !important;
+    justify-content: space-between;
+  }
   .advise-now-btn {
     width: auto !important;
   }
@@ -715,25 +744,74 @@ h4.title-card {
 .section-product-v3 {
   padding-top: 120px;
 }
-
 .card-product {
-  ul.card-product-content {
-    > {
-      margin-bottom: 14px;
-      div {
-        &:nth-child(1) {
-          column-gap: 10px;
-        }
-      }
-      p {
-        max-width: 480px;
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        color: #454647;
-      }
+  padding-top: 60px;
+  img {
+    float: right;
+  }
+  .card-product-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #0979fd;
+  }
+  .card-product-subtitle {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    color: #454647;
+    padding-top: 4px;
+  }
+  .card-product-content {
+    padding: 0;
+  }
+  .card-product-item {
+    list-style: none;
+    padding-top: 32px;
+
+    .card-product-item-title {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 10px;
+      color: #2c2d2e;
+    }
+
+    .card-product-item-des {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 16px;
+      color: #454647;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .card-product {
+      padding-top: 32px;
+    }
+    .card-product-item {
+      padding-top: 24px;
+    }
+    .card-product-img {
+      display: none;
+    }
+    .card-product-img-mobile {
+      display: block !important;
+    }
+    .card-product-subtitle {
+      padding-bottom: 12px;
+    }
+    .card-product-item-des {
+      padding-top: 12px !important;
     }
   }
 }
