@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import background from "../../../images/smart-parking-v3/jpg/bg-parking.jpg";
 import car_img from "../../../images/smart-parking-v3/png/img-car.png";
 
 const SmartHeader = () => {
   return (
-    <div className="smart-parking-v3">
+    <div className="smart-parking-v3-header">
       <header className="smart-parking-header">
         <div className="smart-parking-content">
           <div className="content-left">
