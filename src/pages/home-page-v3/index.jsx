@@ -27,10 +27,10 @@ const IndexPage = () => {
     // <main id="main_page">
     <>
       <SectionSolution />
-      {/* <SectionProduct /> */}
-      {/* <SectionSmartParking /> */}
-      {/* <SectionSmartLighting /> */}
-      {/* <SectionFeaturedProject /> */}
+      <SectionProduct />
+      <SectionSmartParking />
+      <SectionSmartLighting />
+      <SectionFeaturedProject />
       <SectionHelpMore />
     </>
     // </main>

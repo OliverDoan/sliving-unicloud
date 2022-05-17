@@ -32,7 +32,7 @@ const SectionHelpMore = () => {
         <Row className="row-line-center">
           <span className="title-eng-line-center">CONTACT US</span>
           <h2 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h2>
-          <div className="img-line-center d-flex justify-content-center">
+          <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <p className="description-line-center">
