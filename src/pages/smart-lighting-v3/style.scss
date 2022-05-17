@@ -1,11 +1,11 @@
 ///=========================Section Header
 .section-smart-lighting-header{
     width: 100%;
-    max-height: 844px;
+    height: clamp(560px, 50vw, 884px);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: clamp(40px, 16vw, 318px) clamp(20px, 20vw, 370px);
+    padding: clamp(40px, 10vw, 318px) clamp(120px, 20vw, 370px);
     position: relative;
     .header-background{
         position: absolute;
@@ -35,7 +35,7 @@
                 font-family: "SVN Gilroy";
                 font-style: normal;
                 font-weight: 400;
-                font-size: 40px;
+                font-size: clamp(32px, 3vw, 62px);
                 line-height: 72px;
                 align-items: center;
                 justify-content: flex-start;
@@ -49,7 +49,7 @@
                     font-family: "SVN Gilroy";
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 16px;
+                    font-size: clamp(14px, 0.8vw, 16px);
                     line-height: 24px;
                     display: flex;
                     justify-content: flex-start;
@@ -63,3 +63,43 @@
 
 
 ///=========================Responsive
+@media(max-width:1200px){
+    .section-smart-lighting-header{
+        padding: clamp(20px, 18vw, 216px) clamp(20px, 20vw, 240px);
+        align-items: flex-start;
+    }
+}
+@media(max-width:700px){
+    .section-smart-lighting-header{
+        padding: clamp(20px, 14vw, 126px) clamp(20px, 12vw, 175px);
+        align-items: flex-start;
+        .content-container{
+            z-index: 2;
+            .content{
+                width: 100%;
+                .content-title{
+                    justify-content: center;
+                }
+                .content-subtitle-container{
+                    .content-subtitle{
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media(max-width:560px){
+    .section-smart-lighting-header{
+        padding: clamp(20px, 10vw, 126px) clamp(20px, 4vw, 175px);
+        align-items: flex-start;
+        .header-background{
+            display: none;
+        }
+        .header-background.mobile{
+            display: block;
+        }
+    }
+}
