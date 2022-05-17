@@ -4,10 +4,12 @@ import "./style.scss";
 
 import SectionHeader from "./body/section-header";
 
+import SectionSmartParking from "./body/section-smart-parking";
+
 const SmartParking = () => {
   return (
     <main>
-      <SectionHeader />
+      <SectionSmartParking />
     </main>
   );
 };

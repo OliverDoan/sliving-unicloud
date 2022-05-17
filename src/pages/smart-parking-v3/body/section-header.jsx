@@ -5,9 +5,9 @@ import car_img from "../../../images/smart-parking-v3/png/img-car.png";
 
 const SmartHeader = () => {
   return (
-    <div className="smart-parking-v3">
-      <header className="smart-parking-header">
-        <div className="smart-parking-content">
+    <div className="smart-parking-header-v3">
+      <header className="smart-parking-header-container">
+        <div className="smart-parking-header-content">
           <div className="content-left">
             <div className="content-left-title">SMART PARKING</div>
             <div className="content-left-text">
