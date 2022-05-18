@@ -50,6 +50,7 @@ img {
     width: 100%;
     background-position: center;
     background-image: url(../../images/about-us-v3/png/about-us-banner.png);
+    background-repeat: no-repeat;
     min-height: 400px;
     z-index: -2;
     .header-content{
@@ -788,8 +789,6 @@ img {
     color: #0979fd;
   }
   .activity-row {
-    // padding-top: clamp(40px, 7vw, 120px);
-    // padding-bottom: 60px;
     position: relative;
   }
 
