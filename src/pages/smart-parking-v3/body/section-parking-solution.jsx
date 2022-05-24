@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import item1Img from "../../../images/smart-parking-v3/png/img-solution1.png";
 import item2Img from "../../../images/smart-parking-v3/png/img-solution2.png";
 
@@ -145,22 +145,27 @@ const MobileItem = ({ item }) => {
   );
 };
 
-const IconActive = ({ item }) => {
+const IconActive = ({ item, isActive, setActive, id }) => {
   return (
-    <div className="icon-active">
-      <div className="content">
-        <div className="content-title">{item.title}</div>
-        <div className="content-text">{item.text}</div>
-      </div>
+    <div
+      onClick={() => setActive(id)}
+      className={isActive ? "icon-active" : "icon-active deactive"}
+    >
+      {isActive && (
+        <div className="content">
+          <div className="content-title">{item.title}</div>
+          <div className="content-text">{item.text}</div>
+        </div>
+      )}
       <div className="icon">
-        <img src={item.icon_b} alt="" />
+        <img src={isActive ? item.icon_b : item.icon} alt="" />
       </div>
     </div>
   );
 };
 
 const SolutionItem = ({ item }) => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
   return (
     <div className="solution-item-container">
       <div className="solution-title">{item.title}</div>
@@ -172,22 +177,27 @@ const SolutionItem = ({ item }) => {
         <div className="content-container">
           {item.iconList.map((icon) => {
             return active !== icon.id ? (
-              <div>
-                <img
-                  className="img"
-                  src={icon.icon}
-                  alt=""
-                  onClick={() => setActive(icon.id)}
-                />
-              </div>
+              <IconActive
+                key={icon.id}
+                item={icon}
+                isActive={false}
+                id={icon.id}
+                setActive={setActive}
+              />
             ) : (
-              <IconActive item={icon} />
+              <IconActive
+                key={icon.id}
+                item={icon}
+                isActive={true}
+                id={icon.id}
+                setActive={setActive}
+              />
             );
           })}
         </div>
         <div className="content-container mobile">
           {item.iconList.map((icon) => {
-            return <MobileItem item={icon} />;
+            return <MobileItem key={icon.id} item={icon} />;
           })}
         </div>
       </div>
@@ -198,7 +208,7 @@ const SolutionItem = ({ item }) => {
   );
 };
 
-export const SectionParkingSolution = () => {
+const SectionParkingSolution = () => {
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
@@ -214,3 +224,5 @@ export const SectionParkingSolution = () => {
     </section>
   );
 };
+
+export default SectionParkingSolution;
